@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ota yhteyttä</title>
+		
+  <meta name="author" content="Koodioulu">
+  <meta name="description" content="Lasten Koodikoulu asiantuntiavoimin">
+  <meta name="keywords" content="koodikoulu">
+  <link href="favicon.ico" rel="shortcut icon">
+  <link href="res/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="res/style.css">
+  <link rel="apple-touch-icon" href="res/57x57.png"/>  
+  <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>  
+  <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>  
+
+  <script src="res/jquery-2.1.0.js"></script>
+  <script src="res/jquery-ui-1.10.4.min.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
+  <script type="text/javascript" src="res/bootstrap.js"></script>
+  
+  <script language="javascript" type="text/javascript">
+  function OpenThankYou()
+  {
+      document.getElementById('thankyoumessage').style.display='block';
+      document.getElementById('contactdiv').style.display='none';
+  }
+  
+  function CloseThankYou()
+  {
+      document.getElementById('thankyoumessage').style.display='none';
+      document.getElementById('contactdiv').style.display='block';
+  }
+  </script>
+  
+  <script> 
+    // wait for the DOM to be loaded 
+    $(document).ready(function() { 
+        // bind 'myForm' and provide a simple callback function 
+        $('#contactform').ajaxForm(function() { 
+          OpenThankYou();
+        }); 
+     }); 
+  </script>
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-37518235-4', 'auto');
+    ga('send', 'pageview'); 
+  </script>
+
+</head>
+<body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
+
+
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="http://www.koodioulu.com/"><img src="res/koodi.png"></a>
+	  </div>
+
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+		<ul class="nav navbar-nav navbar-right">
+					<div class="menu-main-container"><ul id="menu-main" class="nav navbar-nav navbar-right">
+<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4 current_page_item menu-item-12"><a href="./index.html">Etusivu</a></li>
+<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="./toimintaa.html">Toimintaa</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item menu-item-23"><a href="./otayhteytta.html">Ota yhteyttä</a></li>
+</ul></div>		</ul>
+	  </div>
+	 </div>
+	</nav>
+	
+<div id="page">
+
+	<div class="cabecera otayhteytta">
+		<div class="bg">
+			<div class="container">
+				<h1>Ota yhteyttä</h1>
+				<h2>Haluatko järjestää Koodikoulun lähelläsi?</h2>
+        <h2>Onko sinulla jotain annettavaa koodikoululaisille?</h2>
+				<h2>Etsimme yhteistyökumppaneita...</h2>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+						<div class="col-md-9">
+				<div class="web-content">
+
+<div id="thankyoumessage" style="display: none">
+    <h3>Kiitos!</h3>
+    <h2>Viestisi on nyt matkalla. Otamme yhteyttä mahdollisimman pian.</h2>
+    <br>
+    <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
+    <br><br><br><br><br><br>
+</div>
+
+<div id="contactdiv" class="form">
+	<h3>Lähetä viesti oheisella lomakkeella</h3>
+	<p>Jos antannat yhteystietosi otamme teihin yhteyttä mahdollisimman pian.</p>
+	<br>
+
+	<form id="contactform" action="/contact" method="post">
+		<p>Nimi</p>
+		<input name="name" size="30"><br><br>
+		<p>Sähköposti</p>
+		<input name="email" size="30"><br><br>
+		<p>Viesti</p>
+		<textarea name="message" rows="4" cols="30"></textarea><br><br>
+		<input type="submit" value="Lähetä">
+	</form>
+</div>
+	
+</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<!-- FOOTER -->
+	
+	<div id="footer">
+		<div class="subfooter">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 productos">
+						<h3>Mukana koodaamassa</h3>
+						<div class="divider"><span></span></div>
+						<ul>
+              <li><a target="_blank" href="http://www.yritystakomo.fi/">Yritystakomo</a></li>
+              <li><a target="_blank" href="http://www.ouka.fi/oulu/metsokankaan-koulu">Metsokankaan koulu</a></li>
+						</ul>
+					</div>
+					<!-- div class="col-md-3 social">
+						<h3>Seuraa meitä</h3>
+						<div class="divider"><span></span></div>
+						<ul>
+							<li><a target="_blank" href="http://facebook.com/"><img alt="Facebook" src="./res/ico-facebook.png"></a></li>
+							<li><a target="_blank" href="http://twitter.com/"><img alt="Twitter" src="./res/ico-twitter.png"></a></li>
+						</ul>
+					</div-->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	</body></html>
