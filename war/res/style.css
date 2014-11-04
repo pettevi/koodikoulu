@@ -33,13 +33,13 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .title-content {color:#178ec9; font-size:28px; margin-bottom:15px; line-height:40px; padding-right: 50px;}
 .web-content {padding-right: 50px; text-align: auto;}
 .web-content ul {list-style:none; padding: 5px 0 5px 15px;}
-.web-content ul li {background: url("img/ico-list.png") no-repeat left 5px; padding-left:13px; padding-bottom:4px; font-style:italic; color:#777;}
+.web-content ul li {background: url("ico-list.png") no-repeat left 5px; padding-left:13px; padding-bottom:4px; font-style:normal;}
 .web-content h3 {font-size:24px; color:#178ec9; margin-bottom:15px;}
 .web-content h2 {font-size:16px; color:#333; margin-bottom:5px;margin-top:0}
 .web-content img {max-width:100%; height:auto;}
 .web-content table {margin-top:20px;}
 .web-content .aligncenter {display:block; margin:auto; border: solid 1px gray}
-.web-content .form  p{margin:0;}
+.web-content .form p{margin:0;}
 
 /*PARTNERS*/
 .web-partners {text-align:left;}
