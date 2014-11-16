@@ -6,18 +6,26 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ota yhteyttä</title>
 		
-  <meta name="author" content="Koodioulu">
+  <meta name="author" content="KoodiOulu">
   <meta name="description" content="Lasten koodikoulu asiantuntiavoimin">
   <meta name="keywords" content="koodikoulu">
+
   <link href="favicon.ico" rel="shortcut icon">
   <link href="res/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="res/style.css">
+
   <link rel="apple-touch-icon" href="res/57x57.png"/>  
   <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>  
   <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>  
 
   <script src="res/jquery-2.1.0.js"></script>
   <script src="res/jquery-ui-1.10.4.min.js"></script>
+  <script> 
+    $(function(){
+      $("#footerInclude").load("footer.html"); 
+    });
+  </script> 
+  
   <script src="http://malsup.github.com/jquery.form.js"></script> 
   <script type="text/javascript" src="res/bootstrap.js"></script>
   
@@ -67,7 +75,7 @@
 		  <span class="icon-bar"></span>
 		  <span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="http://www.koodioulu.com/"><img src="res/koodi.png"></a>
+		<a class="navbar-brand" href="http://www.koodioulu.com/"><img></a>
 	  </div>
 
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -98,25 +106,51 @@
 		<div class="row">
 						<div class="col-md-9">
 				<div class="web-content">
+<br>
+  <h3>Kiinnostuitko?</h3>
+  <p>Voit soittaa meistä kummalle tahansa asiasta kuin asiasta. Olemme monessa matkassa mutta aina yksi projekti
+  mukaan mahtuu. </p>
+  <br>
+<div style="width: 80%; display: table;">
+	<div style="display: table-row">
 
-<div id="thankyoumessage" style="display: none">
-    <h3>Kiitos!</h3>
-    <h2>Viestisi on nyt matkalla. Otamme yhteyttä mahdollisimman pian.</h2>
-    <br>
-    <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
-    <br><br><br><br><br><br>
+		<div class="tablecell">
+		  <img class="person petteri" src="res/petteri.jpg" alt="Petteri">
+      <h2>Koodijedi</h2>
+		  <h2>Petteri Hämäläinen</h2>
+		  <p>040 823 5645<br>
+		  pete.hamalainen at gmail.com</p>
+		</div>
+
+		<div class="tablecell">
+	    <img class="person jani" src="res/jani.jpg" alt="Jani">
+      <h2>Pellepeloton</h2>
+		  <h2>Jani Vallirinne</h2>
+		  <p>045 124 8795<br>
+		  jani at vallirinne.fi</p>
+		</div>
+
+	</div>
 </div>
 
+<div id="thankyoumessage" style="display: none">
+  <h3>Kiitos!</h3>
+  <h2>Viestisi on nyt matkalla. Otamme yhteyttä mahdollisimman pian.</h2>
+  <br>
+  <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
+  <br><br><br><br><br><br>
+</div>
+
+<br>
+
 <div id="contactdiv" class="form">
-	<h3>Lähetä viesti oheisella lomakkeella</h3>
-	<p>Jos antannat yhteystietosi otamme teihin yhteyttä mahdollisimman pian.</p>
+	<h3>Voit myös lähettää viestin oheisella lomakkeella</h3>
+	<p>Jos annat yhteystietosi otamme teihin yhteyttä mahdollisimman pian.</p>
 	<br>
 
 	<form id="contactform" action="/contact" method="post">
-		<p>Nimi</p>
+		<p>Nimi ja/tai sähköposti</p>
 		<input name="name" size="30"><br><br>
-		<p>Sähköposti</p>
-		<input name="email" size="30"><br><br>
 		<p>Viesti</p>
 		<textarea name="message" rows="4" cols="30"></textarea><br><br>
 		<input type="submit" value="Lähetä">
@@ -131,30 +165,6 @@
 </div>
 
 <!-- FOOTER -->
-	
-	<div id="footer">
-		<div class="subfooter">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 productos">
-						<h3>Mukana koodaamassa</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-              <li><a target="_blank" href="http://www.yritystakomo.fi/">Yritystakomo</a></li>
-              <li><a target="_blank" href="http://www.ouka.fi/oulu/metsokankaan-koulu">Metsokankaan koulu</a></li>
-						</ul>
-					</div>
-					<!-- div class="col-md-3 social">
-						<h3>Seuraa meitä</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-							<li><a target="_blank" href="http://facebook.com/"><img alt="Facebook" src="./res/ico-facebook.png"></a></li>
-							<li><a target="_blank" href="http://twitter.com/"><img alt="Twitter" src="./res/ico-twitter.png"></a></li>
-						</ul>
-					</div-->
-				</div>
-			</div>
-		</div>
-	</div>
+  <div id="footerInclude"></div>
 
 	</body></html>

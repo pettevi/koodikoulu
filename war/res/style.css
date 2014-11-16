@@ -8,11 +8,12 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .btn-register {background:#178ec9; color:#fff; border-radius:0; transition:all 0.4s ease 0s; padding: 10px 15px; text-transform: uppercase;}
 .btn-register:hover {background:#1D9CDD; text-decoration: underline; transition:all 0.4s ease 0s; color:#fff;}
 .playerframe {background-color:#000;margin:30px auto;width:640px;height:390px;position:relative;box-shadow: 0px 1px 8px 2px #d3d3d3;}
+.required {font-weight:bold; color:#F00;}
 
 /*NAV*/
-.navbar {background-color:#252525; margin-bottom:0; z-index: 15; width:100%; border-radius:0; border:0;}
+.navbar {/*position: fixed; right: 0; top: 0;*/display: block; background-color:#252525; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.55); margin-bottom:0; z-index: 15; width:100%; border-radius:0; border:0;}
 .navbar > .container .navbar-brand {padding:8px 0px; margin-left:-8px; height:65px;}
-.navbar-brand  img{height:65px; width:auto;}
+.navbar-brand  img{height:65px; width:auto; content:url("logo.png");}
 .navbar a {font-weight:300; font-size:16px; color:#2E95B6;}
 .navbar-default .navbar-nav > li > a {color:#fff; transition:all 0.4s ease 0s; font-weight:400;}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {color:#fff;background:#178ec9}
@@ -20,7 +21,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .navbar-nav > li > a {padding:30px 20px 25px;}
 
 /*CABECERA*/
-.cabecera {background: #ffffff url("background.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none;}
+.cabecera {background: #ffffff url("background.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:0;}
 .cabecera.ilmoittautuminen {background-image: url("class.jpg");}
 .cabecera.otayhteytta {background-image: url("letter.jpg");}
 .cabecera.toimintaa {background-image: url("action.png");}
@@ -41,12 +42,32 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .web-content .aligncenter {display:block; margin:auto; border: solid 1px gray}
 .web-content .form p{margin:0;}
 
-/*PARTNERS*/
-.web-partners {text-align:left;}
-.web-partners ul {}
-.web-partners ul li{background:none; display:inline-block; padding:0 0 60px; width:32%; text-align:center;}
-.web-partners ul li a img{max-width:70%; transition:all 0.4s ease 0s;}
-.web-partners ul li a img:hover{opacity:0.5;}
+/*OTA YHTEYTTA*/
+.person {box-shadow:2px 2px 2px rgba(0, 0, 0, 0.25); display:block; margin:0 10px 10px 0; border: solid 1px gray; min-width: 100px; max-width:200px; max-height:200px}
+.tablecell {display: table-cell; padding: 0 10px 0 0;}
+
+.person {
+  -webkit-transition: all 0.15s ease;
+     -moz-transition: all 0.15s ease;
+       -o-transition: all 0.15s ease;
+      -ms-transition: all 0.15s ease;
+          transition: all 0.15s ease;
+}
+.petteri:hover {
+  -webkit-transform: rotate(7deg);
+     -moz-transform: rotate(7deg);
+       -o-transform: rotate(7deg);
+      -ms-transform: rotate(7deg);
+          transform: rotate(7deg);
+}
+
+.jani:hover {
+  -webkit-transform: rotate(-5deg);
+     -moz-transform: rotate(-5deg);
+       -o-transform: rotate(-5deg);
+      -ms-transform: rotate(-5deg);
+          transform: rotate(-5deg);
+}
 
 /*BARRA LATERAL*/
 .barra-lateral{background:#f4f4f4; padding:20px; margin-bottom:20px; margin-left:-20px; margin-right:0;}

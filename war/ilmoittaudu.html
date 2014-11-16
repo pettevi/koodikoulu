@@ -6,33 +6,47 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Ilmoittautuminen</title>
 		
-  <meta name="author" content="Koodioulu">
+  <meta name="author" content="KoodiOulu">
   <meta name="description" content="Lasten koodikoulu asiantuntiavoimin">
   <meta name="keywords" content="koodikoulu">
+  
   <link href="favicon.ico" rel="shortcut icon">
   <link href="res/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="res/style.css">
+  
   <link rel="apple-touch-icon" href="res/57x57.png"/>  
   <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>  
   <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>  
 
   <script src="res/jquery-2.1.0.js"></script>
   <script src="res/jquery-ui-1.10.4.min.js"></script>
+  <script> 
+    $(function(){
+      $("#footerInclude").load("footer.html"); 
+    });
+  </script> 
+  
   <script src="http://malsup.github.com/jquery.form.js"></script> 
   <script type="text/javascript" src="res/bootstrap.js"></script>
-
 
   <script language="javascript" type="text/javascript">
   function OpenThankYou()
   {
       document.getElementById('thankyoumessage').style.display='block';
       document.getElementById('contactdiv').style.display='none';
+      document.getElementById('submitbutton').disabled=false;
+      document.getElementById('submitbutton').value='Ilmoittaudu';
   }
   
   function CloseThankYou()
   {
       document.getElementById('thankyoumessage').style.display='none';
       document.getElementById('contactdiv').style.display='block';
+  }
+  function captureForm()
+  {
+	  document.getElementById('submitbutton').disabled=true;
+    document.getElementById('submitbutton').value='Pieni hetki';
   }
   </script>
   
@@ -67,7 +81,7 @@
 		  <span class="icon-bar"></span>
 		  <span class="icon-bar"></span>
 		</button>
-		<a class="navbar-brand" href="http://www.koodioulu.com/"><img src="res/koodi.png"></a>
+		<a class="navbar-brand" href="http://www.koodioulu.com/"><img></a>
 	  </div>
 
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -100,7 +114,7 @@
 
 <div id="thankyoumessage" style="display: none">
     <h3>Kiitos ilmoittautumisesta!</h3>
-    <h2>Viestisi on nyt matkalla. Vahvistamme osallistumisen mahdollisimman pian.</h2>
+    <h2>Viestisi on nyt matkalla. Vahvistamme yhteydenottosi mahdollisimman pian.</h2>
     <br>
     <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
     <br><br><br><br><br><br>
@@ -108,30 +122,29 @@
 
 <div id="contactdiv" class="form">
 	<h3>Ilmoitan huoltajan ja lapsen mukaan Lasten Koodikouluun</h3>
-	<h2>Lauantai 8.11.2014 klo 10.00-12.00</h2>
-	<h2>Yritystakomo</h2>
-  <h2>Elektroniikkatie 3, Oulu</h2>
-	<br>
-  <p><b>Ryhmä on täynnä, otamme ilmoittautumisia varasijalle vastaan vielä.</b></p>
+  <p>Lauantai 22.11. klo 10:00-12:00</p>
+  <p>Tietomaa, Nahkatehtaankatu 6, Oulu</p>
   <br>
-  <p>Mukaan: Oma läppäri (riittää, että netti toimii), laturi, eväät ja tietty se lapsi.</p>
+  <p>Mukaan: Oma läppäri, laturi, eväät ja tietty se lapsi.</p>
   <p>Tilaisuus on maksuton.</p>
 	<br>
+  <h2>Ryhmä on täynnä, otamme vastaan ilmoittautumisia varasijalle.</h2>
+  <br>
 
-	<form id="contactform" action="/register" method="post">
-		<p>Lapsen nimi</p>
+	<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
+		<p>Lapsen nimi <span class="required">*</span></p>
 		<input name="name" size="30" required><br><br>
 		<p>Lapsen ikä</p>
 		<input name="age" size="30"><br><br>
-		<p>Huoltajan sähköposti</p>
+		<p>Huoltajan sähköposti <span class="required">*</span></p>
 		<input name="email" size="30" required><br><br>
 		<p>Kysymyksiä tai kommenttia järjestäjille</p>
 		<textarea name="message" rows="4" cols="30"></textarea><br><br>
 		<p>
-		Sähköpostiosoitteesi on turvassa. Käytämme sitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
+		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
 		</p>
 		<br>
-		<input type="submit" value="Ilmoittaudu">
+		<input id="submitbutton" type="submit" value="Ilmoittaudu">
 	</form>
 </div>
 	
@@ -142,30 +155,6 @@
 </div>
 
 <!-- FOOTER -->
-	
-	<div id="footer">
-		<div class="subfooter">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 productos">
-						<h3>Mukana koodaamassa</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-              <li><a target="_blank" href="http://www.yritystakomo.fi/">Yritystakomo</a></li>
-              <li><a target="_blank" href="http://www.ouka.fi/oulu/metsokankaan-koulu">Metsokankaan koulu</a></li>
-						</ul>
-					</div>
-					<!-- div class="col-md-3 social">
-						<h3>Seuraa meitä</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-							<li><a target="_blank" href="http://facebook.com/"><img alt="Facebook" src="./res/ico-facebook.png"></a></li>
-							<li><a target="_blank" href="http://twitter.com/"><img alt="Twitter" src="./res/ico-twitter.png"></a></li>
-						</ul>
-					</div -->
-				</div>
-			</div>
-		</div>
-	</div>
+<div id="footerInclude"></div>
 
-	</body></html>
+</body></html>

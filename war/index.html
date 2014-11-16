@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Koodioulu</title>
 
-	<meta name="author" content="Koodioulu" />
+	<meta name="author" content="KoodiOulu" />
 	<meta name="description" content="Lasten koodikoulu asiantuntiavoimin" />
 	<meta name="keywords" content="koodikoulu" />
 	<link href="favicon.ico" rel="shortcut icon" />
@@ -23,8 +23,15 @@
   <link rel="apple-touch-icon" href="res/57x57.png"/>
   <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>
   <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>
+
   <script src="res/jquery-2.1.0.js"></script>
   <script type="text/javascript" src="res/bootstrap.js"></script>
+  <script> 
+    $(function(){
+      $("#footerInclude").load("footer.html"); 
+    });
+  </script> 
+
 	<script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -48,23 +55,24 @@
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container">
-	   <div class="navbar-header">
-		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-		  <span class="sr-only">Toggle navigation</span>
-		  <span class="icon-bar"></span>
-		  <span class="icon-bar"></span>
-		  <span class="icon-bar"></span>
-		</button>
-		<a class="navbar-brand" href="http://www.koodioulu.com/"><img src="res/koodi.png"></a>
-	  </div>
-
+	    <div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+				  <span class="sr-only">Toggle navigation</span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				  <span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="http://www.koodioulu.com/"><img></a>
+	    </div>
 	  <div class="collapse navbar-collapse navbar-ex1-collapse">
-		<ul class="nav navbar-nav navbar-right">
-					<div class="menu-main-container"><ul id="menu-main" class="nav navbar-nav navbar-right">
-<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-12"><a href="./index.html">Etusivu</a></li>
-<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="./toimintaa.html">Toimintaa</a></li>
-<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="./otayhteytta.html">Ota yhteyttä</a></li>
-</ul></div>		</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<div class="menu-main-container"><ul id="menu-main" class="nav navbar-nav navbar-right">
+					<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-12"><a href="./index.html">Etusivu</a></li>
+					<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="./toimintaa.html">Toimintaa</a></li>
+					<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="./otayhteytta.html">Ota yhteyttä</a></li>
+	        </ul>
+	      </div>
+			</ul>
 	  </div>
 	 </div>
 	</nav>
@@ -76,11 +84,10 @@
 			<div class="container">
 				<h1>Tervetuloa Lasten Koodikouluun</h1>
 				<h2>4-9 vuotiaille lapsille</h2>
-				<h2>Lauantai 8.11.2014</h2>
-				<h2>Klo 10.00-12.00</h2>
-				<h2 id="abc">Yritystakomo, Elektroniikkatie 3, Oulu</h2>
-				<a class="btn-register" href="ilmoittaudu.html">Ilmoittaudu varasijalle</a>
-				
+        <h2>Lauantai 22.11. klo 10:00</h2>
+        <h2>Tietomaa, Nahkatehtaankatu 6, Oulu</h2>
+        <h2 id="abc">Ryhmä on täynnä. Kiitos osallistujille.</h2>
+				<a class="btn-register" href="ilmoittaudu.html">Ilmoittaudu varalle!</a>				
 			</div>
 		</div>
 	</div>
@@ -93,17 +100,16 @@
 <h3>Ai mikä koodikoulu?</h3>
 
 <p>
-Pääkaupunkiseudulla suuren suosion saanut Lasten Koodikoulu järjestettiin Oulussa ensimmäistä kertaa Metsokankaan 
-koululla lauantaina 11.10.2014. Koodikoulun periaatteisiin kuuluu, että osallistuminen on maksuton eikä vaadi alkutaitoja,
-vain innostusta asiaan.
-</p>
-<p>
-Koodikoulussa lapsi oppii yhdessä huoltajan kanssa käskemään tietokonetta kirjoittamalla komentoja selaimessa toimivassa
+Koodikoulu on 4-9 vuotiaille lapsille tarkoitettu ensikosketus ohjelmointiin. Koodikoulussa lapsi oppii yhdessä huoltajan 
+kanssa käskemään tietokonetta kirjoittamalla komentoja selaimessa toimivassa
 oppiympäristössä. Huoltajan läsnäolo on erityisen suotavaa koska jokainen lapsi etenee omassa tahdissaan ja tarvitsee 
 aikuisen jonka kanssa jakaa onnistumisen kokemukset. Pienimmät voivat lisäksi tarvita tukea oikeinkirjoituksessa ja 
 englanninkielessä. Koulupäivä kestää noin 2 tuntia mutta pois saa lähteä heti kun lapsi ei enään jaksa. 
 </p>
-<p>Koodikoulusta voi lukea lisää osoitteesta <a href="http://koodikoulu.fi/">http://koodikoulu.fi/</a>.</p>
+<p>
+Pääkaupunkiseudulla suuren suosion saanut Lasten Koodikoulu järjestettiin Oulussa ensimmäistä kertaa Metsokankaan 
+koululla 11.10.2014. Koodikoulun periaatteisiin kuuluu, että osallistuminen on maksuton eikä vaadi alkutaitoja,
+vain innostusta asiaan. Koodikoulusta voi lukea lisää osoitteesta <a href="http://koodikoulu.fi/">http://koodikoulu.fi/</a>.</p>
 
 <h3>Kelle tää on?</h3>
 
@@ -124,7 +130,7 @@ rakenteita hyödyntämällä ja loogista ajattelua harjoittelemalla lapsi oppii 
     rel=0&amp;showinfo=0&amp;modestbranding=1" style="border:0"></iframe>
 </div>
 
-<h3>Mikä on Koodioulu?</h3>
+<h3>Mikä on KoodiOulu?</h3>
 
 <p>
 Oulussa toimintaa järjestää <a href="http://www.yritystakomo.fi/">Yritystakomolla</a> kohdanneet ohjelmoinnin 
@@ -140,10 +146,12 @@ Lisätietoja löydät tämän sivun ylälaidan linkkien takaa. Ota yhteyttä, ku
 <div class="noticias barra-lateral">
 	<h2>Uutisia</h2>
 	<ul>
-    <li>Metsokankaan koodikoululaisten kakkospäivä pidetään lauantaina 15.11.2014. Jos et ole jo ilmoittautunut voit tehdä sen <a href="otayhteytta.html">täällä.</a></li>
-    <li>Uusi ryhmä <a href="http://www.yritystakomo.fi/">Yritystakomon</a> tiloissa 8.11.2014. Ryhmä on täynnä, otamme <a href="ilmoittaudu.html">ilmoittautumisia varasijalle</a> vastaan.</li>
-    <li>Metsokankaan toinen lasten koodikoulu pidettiin 1.11.2014. <a href="toimintaa.html#01112014">Lue lisää...</a></li>
-		<li>Oulun ensimmäinen lasten koodikoulu pidettiin Metsokankaan koululla 11.10.2014. <a href="toimintaa.html#11102014">Lue lisää...</a></li>
+    <li>Uusi koodikoulu yhteistyössä <a href="http://www.tietomaa.fi/">Tietomaan</a> kanssa 22.11.2014. Ryhmä on täynnä, <a href="ilmoittaudu.html">ilmoittaudu varalle.</a></li>
+    <li>Metsokankaan koodikoululaisten kakkospäivä pidettiin 15.11.2014. <a href="toimintaa.html#15112014">Lue lisää...</a></li>
+    <li>Koodikoulu <a href="http://www.yritystakomo.fi/">Yritystakomon</a> tiloissa 8.11.2014. <a href="toimintaa.html#08112014">Lue lisää...</a></li>
+    <li>"Lasten Koodikoulu tarjoaa onnistumisen kokemuksia". Uutinen Yritystakomolta. <a href="http://www.yritystakomo.fi/2014/11/lasten-koodikoulu-tarjoaa-onnistumisen-kokemuksia/">Lue lisää...</a></li>
+    <li>Metsokankaan toinen Lasten Koodikoulu pidettiin 1.11.2014. <a href="toimintaa.html#01112014">Lue lisää...</a></li>
+		<li>Oulun ensimmäinen Lasten Koodikoulu pidettiin Metsokankaan koululla 11.10.2014. <a href="toimintaa.html#11102014">Lue lisää...</a></li>
 	</ul>
 	<p class="enlace-barra-lateral"><a href="/toimintaa.html">Lisää...</a></p>
 </div>
@@ -158,29 +166,6 @@ data-action="like" data-show-faces="false" data-share="true"></div>
 </div>
 
 <!-- FOOTER -->
-	
-	<div id="footer">
-		<div class="subfooter">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-6 productos">
-						<h3>Mukana koodaamassa</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-							<li><a target="_blank" href="http://www.yritystakomo.fi/">Yritystakomo</a></li>
-              <li><a target="_blank" href="http://www.ouka.fi/oulu/metsokankaan-koulu">Metsokankaan koulu</a></li>
-						</ul>
-					</div>
-					<div class="col-md-3 productos">
-						<h3>Jotain muuta</h3>
-						<div class="divider"><span></span></div>
-						<ul>
-							<li><a href="rekisteriseloste.html">Rekisteriseloste</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<div id="footerInclude"></div>
 
 </body></html>
