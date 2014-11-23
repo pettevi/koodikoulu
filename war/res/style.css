@@ -43,7 +43,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .web-content .form p{margin:0;}
 
 /*OTA YHTEYTTA*/
-.person {box-shadow:2px 2px 2px rgba(0, 0, 0, 0.25); display:block; margin:0 10px 10px 0; border: solid 1px gray; min-width: 100px; max-width:200px; max-height:200px}
+.person {box-shadow:1px 1px 2px rgba(0, 0, 0, 0.25); display:block; margin:0 10px 10px 0; min-width: 100px; max-width:226px; max-height:270px}
 .tablecell {display: table-cell; padding: 0 10px 0 0;}
 
 .person {
@@ -62,11 +62,11 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 }
 
 .jani:hover {
-  -webkit-transform: rotate(-5deg);
-     -moz-transform: rotate(-5deg);
-       -o-transform: rotate(-5deg);
-      -ms-transform: rotate(-5deg);
-          transform: rotate(-5deg);
+  -webkit-transform: rotate(-4deg);
+     -moz-transform: rotate(-4deg);
+       -o-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+          transform: rotate(-4deg);
 }
 
 /*BARRA LATERAL*/
@@ -83,32 +83,9 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .enlace-barra-lateral a:hover {color:#08608f; text-decoration:none; transition:all 0.4s ease 0s;}
 
 /*NOTICIAS*/
-.listado-noticias, .contenido-noticia {padding-right:40px;}
-.listado-noticias .noticia {margin-bottom:40px;}
-.listado-noticias .noticia .imagen-noticia a img {width:100%; height:auto; transition:all 0.4s ease 0s;}
-.listado-noticias .noticia .imagen-noticia a img:hover {opacity:0.7;}
-.listado-noticias .noticia .excerpt-noticia h3 {font-size: 14px; font-weight: 400; line-height: 21px; margin-top:0;}
-.listado-noticias .noticia .excerpt-noticia h3 a {transition: all 0.4s ease 0s;}
-.listado-noticias .noticia .excerpt-noticia h3 a:hover, .listado-noticias .noticia .excerpt-noticia h3 a:focus, .listado-noticias .noticia .excerpt-noticia h3 a:active{color:#08608f; text-decoration:none;}
-.listado-noticias .noticia .excerpt-noticia .fecha-noticia {color: #999999; float: left; font-size: 11px; margin-right: 4px; margin-top: 2px;}
-.listado-noticias .noticia .excerpt-noticia .entrada-noticia {line-height:18px; font-size:12px; text-align:auto;}
-.listado-noticias .noticia .excerpt-noticia .readmore {display:none;}
-.contenido-noticia .noticia {text-align:auto;}
-.contenido-noticia .noticia h1 {font-size:16px; color:#178ec9; margin-bottom:20px; margin-top:0; font-weight:400;}
-.contenido-noticia .noticia .imagen-noticia {max-width:40%; height:auto; float:left; margin-bottom:10px; margin-right:13px;}
-.contenido-noticia .botones-compartir {margin:20px 0;}
-.contenido-noticia .volver-noticias {font-size:12px;}
-.page-noticias .noticias.barra-lateral {display:none;}
-
-/*CONTACTO*/
-.direccion-contacto iframe {margin:15px 0;}
-.direccion-contacto img {width:290px;}
-.formulario-contacto h3 {font-size:16px; color:#178ec9; margin-bottom:20px;}
-.formulario-contacto .form-control, .captcha input {border-radius:0; font-size:13px; margin-bottom:15px !important; padding:5px 10px; height:32px; border: 1px solid #cccccc; box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;}
-.formulario-contacto .form-control:focus, .captcha input:focus {border:1px solid rgba(23, 142, 201, 0.8); box-shadow:none;}
-.formulario-contacto textarea.form-control {height:auto;}
-.formulario-contacto label{display:block;}
-.formulario-contacto input, .formulario-contacto select {width:70%;}
+.noticias a img {display:block; margin: 20px auto auto; transition:all 0.4s ease 0s;}
+.noticias a:hover img {opacity: 0.7; filter: alpha(opacity=70);}
+.noticias .firstimage {margin:auto;}
 
 /*FOOTER*/
 .subfooter {border-top:1px solid #555555; background:#252525; margin-top:70px; color:#777; padding-bottom:20px; font-size:13px;}
@@ -130,11 +107,10 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .footer a {color:#fff; text-decoration:none; transition:all 0.4s ease 0s;}
 .footer a:hover {color:#053e5c; text-decoration:none; transition:all 0.4s ease 0s;}
 
-
 /*RESPONSIVE*/
 @media (max-width: 768px){
 	.customize-support {padding-top:46px;}
-/*	.navbar-nav {margin:10px 0;}*/
+	.navbar-nav {margin:10px 0;}
 	.navbar > .container .navbar-brand {margin-left:10px;}
 	.navbar-brand img {height:52px;}
 	.navbar-toggle {margin-top:18px; border:none;}

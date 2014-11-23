@@ -1,6 +1,7 @@
 package com.koodikoulu;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -15,13 +16,18 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.google.appengine.api.datastore.DatastoreService;
+import com.google.appengine.api.datastore.DatastoreServiceFactory;
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+import com.google.appengine.api.datastore.KeyFactory;
+
 public class Register extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
 		
 		System.out.println("get");
-		
 	}
 	
 	public void doPost(HttpServletRequest req, HttpServletResponse resp)
@@ -31,7 +37,8 @@ public class Register extends HttpServlet {
         String age = req.getParameter("age");
         String email = req.getParameter("email");
         String message = req.getParameter("message");
-
+        String event = req.getParameter("event");
+        
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
         
@@ -41,7 +48,7 @@ public class Register extends HttpServlet {
             Message msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
-            msg.setSubject("Ilmoittautuminen 22.11. koodikouluun");
+            msg.setSubject("Ilmoittautuminen koodikouluun " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nEmail: " + email + "\nViesti: " + message);
             Transport.send(msg);
             allOK = true;
@@ -50,8 +57,21 @@ public class Register extends HttpServlet {
         } catch (MessagingException e) {
             // ...
         }
+		Key key = KeyFactory.createKey("Koodioulu", event);
+		Entity person = new Entity("person", key);
+
+		person.setProperty("event", event);
+		person.setProperty("date", new Date());
+		person.setProperty("kidname", name);
+		person.setProperty("age", age);
+		person.setProperty("email", email);
+		person.setProperty("message", message);
+		
+		// save to datastore
+		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
+		datastore.put(person);
         
-		// respond to query
+        // respond to query
 		// client side forwarding
 		if (!allOK)
 		{
