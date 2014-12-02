@@ -13,7 +13,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 /*NAV*/
 .navbar {/*position: fixed; right: 0; top: 0;*/display: block; background-color:#252525; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.55); margin-bottom:0; z-index: 15; width:100%; border-radius:0; border:0;}
 .navbar > .container .navbar-brand {padding:8px 0px; margin-left:-8px; height:65px;}
-.navbar-brand  img{height:65px; width:auto; content:url("logo.png");}
+.navbar-brand  img{height:65px; width:auto;}
 .navbar a {font-weight:300; font-size:16px; color:#2E95B6;}
 .navbar-default .navbar-nav > li > a {color:#fff; transition:all 0.4s ease 0s; font-weight:400;}
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {color:#fff;background:#178ec9}
@@ -25,6 +25,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .cabecera.ilmoittautuminen {background-image: url("class.jpg");}
 .cabecera.otayhteytta {background-image: url("letter.jpg");}
 .cabecera.toimintaa {background-image: url("action.png");}
+.cabecera.kurssit {background-image: url("tietomaa.jpg");}
 .cabecera .bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
 .cabecera .bg h1 {color:#fff; margin-top:80px; font-weight:300;}
 .cabecera .bg h2 {color:#fff; font-size:20px; max-width:60%; line-height:25px; font-weight:400; margin:0 0 5px 0}
@@ -32,7 +33,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 
 /*CONTENT*/
 .title-content {color:#178ec9; font-size:28px; margin-bottom:15px; line-height:40px; padding-right: 50px;}
-.web-content {padding-right: 50px; text-align: auto;}
+.web-content {padding-right: 50px;}
 .web-content ul {list-style:none; padding: 5px 0 5px 15px;}
 .web-content ul li {background: url("ico-list.png") no-repeat left 5px; padding-left:13px; padding-bottom:4px; font-style:normal;}
 .web-content h3 {font-size:24px; color:#178ec9; margin-bottom:15px;}
@@ -87,6 +88,22 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .noticias a:hover img {opacity: 0.7; filter: alpha(opacity=70);}
 .noticias .firstimage {margin:auto;}
 
+/*KURSSIT*/
+.kuvaus {background:none}
+.ui-tabs-anchor {display: inline-block; margin: 0 20px 0 0 ; width:250px; text-align: center; background:#178ec9; color:#fff; border-radius:0; transition:all 0.4s ease 0s; padding: 10px 15px; text-transform: uppercase;}
+.ui-tabs-anchor:hover {background:#1D9CDD; text-decoration: underline; transition:all 0.4s ease 0s; color:#fff;}
+.ui-tabs-anchor:focus {background:#30C917; text-decoration: none; transition:all 0.4s ease 0s; color:#fff;}
+.ui-tabs-tilatieto {display: inline-block; }
+.web-content .kuvaus ul li {background:none; padding: 0 0 4px 0; outline: 0}
+.ui-tabs-active a {background:#30C917; text-decoration:none; color:#fff}
+.ui-tabs-panel {padding:10px; border:1px solid #178ec9}
+.kuvaus h3 {margin: 0 0 15px 0}
+.tilatieto {display:inline; color: #000}
+#tabs-1, #tabs-2, #tabs-3, #tabs-4 {
+	transition:         opacity 0.4s ease-in-out;
+}
+
+
 /*FOOTER*/
 .subfooter {border-top:1px solid #555555; background:#252525; margin-top:70px; color:#777; padding-bottom:20px; font-size:13px;}
 .subfooter a{color:#0090D1; transition:all 0.4s ease 0s;}
@@ -124,7 +141,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 	.cabecera .bg {padding-bottom:80px; height:auto;}
 	.cabecera .bg h1 {margin-top:30px;}
 	.barra-lateral{margin-left:0; margin-right:0;}
-	.web-content {padding-right: 0; text-align: auto;}
+	.web-content {padding-right: 0;}
 	.listado-noticias, .contenido-noticia {padding-right:15px;}
 	.web-partners ul li{width:100%; text-align:center;}
 	.playerframe {width:279px;height:185px}

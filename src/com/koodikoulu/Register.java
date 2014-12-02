@@ -38,6 +38,7 @@ public class Register extends HttpServlet {
         String email = req.getParameter("email");
         String message = req.getParameter("message");
         String event = req.getParameter("event");
+        String group = req.getParameter("group");
         
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
@@ -49,7 +50,7 @@ public class Register extends HttpServlet {
             msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
             msg.setSubject("Ilmoittautuminen koodikouluun " + event);
-            msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nEmail: " + email + "\nViesti: " + message);
+            msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nEmail: " + email + "\nRyhmä: " + group + "\nViesti: " + message);
             Transport.send(msg);
             allOK = true;
         } catch (AddressException e) {
