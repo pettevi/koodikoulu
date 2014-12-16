@@ -17,7 +17,7 @@
   <meta property="og:site_name" content="Koodioulu"/>
   <meta property="og:url" content="http://www.koodioulu.fi" />
   <meta property="og:description" content="KoodiOulu järjestää koodauksen opetusta lapsille Oulussa. Kaikki asiasta innostuneet ovat tervetulleita ilman alkuvaatimuksia. Tule mukaan koodaamaan!" />
-  <meta property="og:image" content="http://www.koodioulu.fi/res/fbpreview.png" />
+  <meta property="og:image" content="http://www.koodioulu.com/res/fbpreview.png" />
   <meta property="fb:admins" content="787886531" />
 
   <link rel="apple-touch-icon" href="res/57x57.png"/>
@@ -26,6 +26,9 @@
 
   <script src="res/jquery-2.1.0.js"></script>
   <script type="text/javascript" src="res/bootstrap.js"></script>
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
+  <script src="res/jquery-ui-1.10.4.min.js"></script>
+  
   <script> 
     $(function(){
       $("#footerInclude").load("footer.html"); 
@@ -40,6 +43,17 @@
 	  ga('create', 'UA-37518235-4', 'auto');
 	  ga('send', 'pageview');	
 	</script>
+
+  <script>
+  $(function() {
+    $( "#tabs" ).tabs({
+        activate: function(event ,ui){
+            ui.newPanel[0].style.opacity  = 0.2;
+            ui.newPanel.animate({opacity : 1}, 0 );
+        }
+    });
+  });
+  </script>
 
 </head>
 <body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
@@ -81,11 +95,9 @@
 	<div class="cabecera product">
 		<div class="bg">
 			<div class="container">
-				<h1>Tervetuloa Lasten Koodikouluun</h1>
-				<h2>4-9 vuotiaille lapsille lauantai 13.12. klo 13:00</h2>
-        <h2>10-15 vuotiaille nuorille lauantai 13.12. klo 16:00</h2>
-        <h2 id="abc">Tietomaa, Nahkatehtaankatu 6, Oulu</h2>
-				<a class="btn-register" href="ilmoittaudu.html">Ilmoittaudu!</a>				
+        <h1>Pitkät Koodikoulut Keväällä 2015</h1>
+        <h2>Lapsille, nuorille ja aikuisille</h2>
+        <h2>Ilmoittautuminen käynnissä nyt</h2>
 			</div>
 		</div>
 	</div>
@@ -95,49 +107,178 @@
 						<div class="col-md-9">
 				<div class="web-content">
 
-<h3>Ai mikä koodikoulu?</h3>
+  <h3>Tervetuloa Koodikouluun</h3>
+  
+  <p>Tietomaa ja KoodiOulu järjestävät yhteistyössä Oulun ensimmäiset koko kevätlukukauden mittaiset koodikoulut. 
+  Koodikouluissa opetellaan tietokoneohjelmointia sekä kehitetään kykyä pilkkoa ongelma osiin, antaa yksikäsitteisiä 
+  komentoja tietokoneelle ja pohtia, mitkä komennot ratkaisevat ongelman.</p>
+  
+  <blockquote>
+  Yhä suuremman osan maailmasta rakentavat he, jotka osaavat luoda taidetta tai tiedettä tai vaikkapa älypuhelinsovelluksia 
+  ja internetpalveluita tietokoneiden avulla.
+  <footer><cite><a href="http://www.koodi2016.fi">www.koodi2016.fi</a></cite></footer>
+  </blockquote>
+  
+  <p>Koodikoulua järjestetään useille ryhmille. Nuorimpien ryhmissä opitaan leikkien kautta, vanhempien ryhmissä koodataan eri 
+  ohjelmointikielillä. Tavoitteena on, että jokainen osallistuja voi edetä omien taitojensa mukaan. Ohjelmointia ei voi oppia 
+  kuin itse tekemällä.</p>
+  
+  
+  <p>Keväällä järjestetään myös ilmaisia Lasten Koodikoulu tapahtumia. Seuraava ryhmä on suunnitteilla tammikuuksi.
+  Tähän päivään voi ilmoittautua varalle jo nyt. Otamme yhteyttä kun päivä on varmistunut. <a href="lastenkoodikoulu.html">Lue lisää...</a></p>
 
-<p>
-Koodikoulu on 4-9 vuotiaille lapsille tarkoitettu ensikosketus ohjelmointiin. Koodikoulussa lapsi oppii yhdessä huoltajan 
-kanssa käskemään tietokonetta kirjoittamalla komentoja selaimessa toimivassa
-oppiympäristössä. Huoltajan läsnäolo on erityisen suotavaa koska jokainen lapsi etenee omassa tahdissaan ja tarvitsee 
-aikuisen jonka kanssa jakaa onnistumisen kokemukset. Pienimmät voivat lisäksi tarvita tukea oikeinkirjoituksessa ja 
-englanninkielessä. Koulupäivä kestää noin 2 tuntia mutta pois saa lähteä heti kun lapsi ei enään jaksa. 
-</p>
-<p>
-Pääkaupunkiseudulla suuren suosion saanut Lasten Koodikoulu järjestettiin Oulussa ensimmäistä kertaa Metsokankaan 
-koululla 11.10.2014. Koodikoulun periaatteisiin kuuluu, että osallistuminen on maksuton eikä vaadi alkutaitoja,
-vain innostusta asiaan. Koodikoulusta voi lukea lisää osoitteesta <a href="http://koodikoulu.fi/">http://koodikoulu.fi/</a>.</p>
+  <h3>Keväällä 2015 alkavien pitkien ryhmien kurssikuvaukset</h3>
 
-<h3>Kelle tää on?</h3>
+<div id="tabs" class="kuvaus">
+  <ul>
+    <li><div><a href="#tabs-1">Koodikoulu 4-8 -vuotiaat</a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
+    <li><div><a href="#tabs-2">Koodikoulu 9-12 -vuotiaat</a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
+    <li><div><a href="#tabs-3">Koodikoulu 12-15 -vuotiaat</a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
+    <li><div><a href="#tabs-4">Seniorit alkeiskurssi </a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
+  </ul>
+  
+  <p><i>*Ikärajat ovat suosituksia, ota yhteyttä opettajaan jos haluat valita sopivimman ryhmän.</i></p>
+  
+  <div id="tabs-1">
+    <h3>Kurssikuvaus: Koodikoulu 4-8 -vuotiaat</h3>
+    
+    <p>Tietomaassa käynnistetään pienille lapsille oma koodikoulu. Koodikoulussa opitaan ohjelmoinnin leikkien ja pelien kautta
+     ja myös itse ohjelmia tuottaen. Lukutaito ei ole välttämätön, pienetkin oppilaat oppivat ohjelmoimaan yksinkertaisia 
+     ohjelmia! Lukutaidottomat oppilaat tarvitsevat kuitenkin huoltajan mukaan.</p> 
+     
+    <p>Kurssin jälkeen oppilaat ymmärtävät ja osaavat tietokoneen ohjelmoinnin perusasiat ja pystyvät tekemään yksinkertaisia 
+    ohjelmia. Kurssin jälkeen oppilaiden asenne tietokoneisiin on avoin ja kokeileva ja he pystyvät pilkkomaan ongelmia 
+    pienemmiksi helposti ratkaistaviksi osiksi.</p>
 
-<p>
-Lasten Koodikoulu sopii parhaiten alle kouluikäisille tai juuri koulunsa aloittaneille jotka ovat käyttäneet jotain
-tietoteknisiä laitteita kuten älypuhelinta tai läppäriä. Lapsen ei tarvitse osata lukea eikä kirjoittaa mutta nämä taidot
-ovat ehdottomasti hyödyksi. Hieman vanhemmat lapset saattavat pitkästyä tehtävien yksinkertaisuuden vuoksi mutta 
-osallistumista ei missään nimessä ole kielletty.
-</p>
-<p>
-Ohjelmoinnissa on muutamia perusrakenteita jotka ovat yhteisiä riippumatta siitä, mitä tai millä ohjelmoidaan. Näitä
-rakenteita hyödyntämällä ja loogista ajattelua harjoittelemalla lapsi oppii ottamaan koneen hallintaansa.
-</p>
+    <h3>Kurssitiedot</h3>
+    <p>
+    Nimi: Koodikoulu 4-8 -vuotiaat<br>
+    Aika: torstai 22.1. – 9.5.2015 klo 13:30 - 14:15 (ei 5.3,  2.4. ja 30.4.)<br>
+    Paikka: Tietomaan Tiedeluokka<br>
+    Hinta: 150€ kevätlukukausi, sisältää 13 kertaa<br>
+    Vastuullinen opettaja: Jani Vallirinne<br>
+    </p>
+    <p>Oma kannettava tietokone on pakollinen.</p>
+    <p>Lisätietoja saa suoraan opettajalta, puh. 045 124 8795.</p>
+    <br>  
+    <a class="btn-register" href="kurssitilmo1.html">Ilmoittaudu</a>
+    <br><br>
+  </div>
+  
+  <div id="tabs-2">
+    <h3>Kurssikuvaus: Koodikoulu 9-12 -vuotiaat</h3>
+    
+    <p>Tietomaassa käynnistetään 3.-6. luokan oppilaille oma koodikoulu. Tietokoneen käyttötaitoa ei tarvita ennestään vaan 
+    kurssilla opetetaan samalla tarvittavat taidot. </p> 
+    
+    <p>Ryhmässä käydään perusteista lähtien läpi ohjelmointiin liittyviä asioita internetin toiminnasta ja pilviteknologiasta, 
+    turvallisesta netinkäytöstä, Windows käyttöjärjestelmästä ja tietysti erilaisia ohjelmointialustoja ja -kieliä. Kurssi 
+    tähtää siihen, että oppilas osaa ajatella järjestelmällisesti ja täsmällisesti pystyäkseen pilkkoakseen ohjelmointiongelmat 
+    pieniin ratkaistaviin osiin ja ohjelmoimaan niihin ratkaisun. Kurssin jälkeen oppilas osaa käyttää tietokonetta sujuvasti 
+    ja itsenäisesti ja tuottamaan yksinkertaisia ohjelmia.</p>
+    
+    <p>Kurssilla oppilas saa eväitä myös turvalliseen netinkäyttöön ja lähdekritiikkiin Internetissä. Koodikoulussa rohkaistaan 
+    jokaista oppilaista harjoittelemaan asioita laaja-alaisesti myös kotona. </p>
 
-<div class="playerframe">
-    <iframe id="player" width="640" height="390" 
-    src="http://www.youtube.com/embed/a6hf5cTOyhI?enablejsapi=1&amp;autoplay=0&amp;controls=0&amp;
-    rel=0&amp;showinfo=0&amp;modestbranding=1" style="border:0"></iframe>
+    <h3>Kurssitiedot</h3>
+    <p>
+    Nimi: Koodikoulu 9-12 -vuotiaat<br>
+    Aika: torstai 22.1. – 7.5.2015 klo 14:30 - 16:00 (ei 5.3, 2.4, 30.4)<br>
+    Paikka: Tietomaan Tiedeluokka<br>
+    Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
+    Vastuullinen opettaja: Jani Vallirinne<br>
+    </p>
+    <p>Oma kannettava tietokone on pakollinen.</p>
+    <p>Lisätietoja saa suoraan opettajalta, puh. 045 124 8795.</p>
+    <br>  
+    <a class="btn-register" href="kurssitilmo2.html">Ilmoittaudu</a>
+    <br><br>
+  </div>
+  
+  <div id="tabs-3">
+    <h3>Kurssikuvaus: Koodikoulu 12-15 -vuotiaat</h3>
+    
+    <p>Nyt pärähtää. Tietomaassa käynnistetään tietokoneiden peruskäytön jo osaaville koululaisille oma koodikoulu. 
+    Ryhmässä käydään perusteista lähtien läpi laajalti ohjelmointiin liittyviä asioita internetin toiminnasta ja 
+    pilviteknologiasta, turvallisesta netinkäytöstä ja Windows käyttöjärjestelmästä sekä opetellaan koodaamaan netin 
+    suosituimmalla ohjelmointikielellä Javalla.</p>
+
+    <p>Koodikoulussa rohkaistaan jokaista oppilaista harjoittelemaan asioita laaja-alaisesti. Oppilaiden henkilökohtaiset 
+    mieltymykset huomioon ottaen kurssin aikana toteutetaan pienimuotoinen ohjelmistoprojekti. Kurssi tähtää
+    siihen, että oppilas pystyy itsenäisesti koodaamaan pelin, ohjelman tai nettisaitin sekä julkaisemaan sen.</p>
+
+    <p>Lähinnä yläkoululaisille tarkoitetussa koodikoulussa hyödyksi on jos oppilaalla on harjaantuneisuus käyttää omaa 
+    konettaan sujuvasti, on opiskellut englannin kieltä sekä osaa käyttää netin suosituimpia palveluja kuten YouTube ja
+    gmail. Varsinaista ohjelmointikokemusta ei tarvita kunhan osallistujalla on vahva kiinnostuneisuus asiaan.</p>
+
+    <h3>Kurssitiedot</h3>
+    <p>
+    Nimi: Koodikoulu 12-15 -vuotiaat<br>
+    Aika: torstai 22.1. – 7.5.2015 klo 16:15 - 18:00 (ei 5.3, 2.4, 30.4)<br>
+    Paikka: Tietomaan Tiedeluokka<br>
+    Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
+    Vastuullinen opettaja: Petteri Hämäläinen<br>
+    </p>
+    <p>Oma kannettava tietokone on pakollinen.</p>
+    <p>Lisätietoja saa suoraan opettajalta, puh. 040 823 5645.</p>
+    <br>  
+    <a class="btn-register" href="kurssitilmo3.html">Ilmoittaudu</a>
+    <br><br>
+  </div>
+  
+  <div id="tabs-4">
+    <h3>Kurssikuvaus: Seniorit alkeiskurssi</h3>
+    
+    <p>Koodikoulu on tarkoitettu aikuisille tietokoneen käytöstä kiinnostuneille, joilla ei ole välttämättä vielä osaamista 
+    tietokoneen käytöstä. Myös sujuvasti tietokonetta käyttävät voivat tulla kurssille, kurssisisältöä muokataan niin että 
+    kaikki oppivat itse tekemällä ja opettajan ohjauksessa.</p> 
+    
+    <p>Aikuisten koodikoulussa opitaan käyttämään tietokoneita, tabletteja ja puhelimia sujuvasti samalla kun opetellaan 
+    ohjelmoinnin perusasioita. Internetin ja sen palveluiden käyttö käydään läpi tarpeen mukaan.</p>
+    
+    <p>Kurssi tähtää siihen, että oppilas osaa ajatella järjestelmällisesti ja täsmällisesti pystyäkseen pilkkoakseen 
+    ohjelmointiongelmat pieniin ratkaistaviin osiin ja ohjelmoimaan niihin ratkaisun. Kurssin jälkeen oppilas osaa käyttää 
+    tietokonetta sujuvasti ja itsenäisesti ja tuottamaan yksinkertaisia ohjelmia.</p>
+    
+    <p>Kurssin teemat rakennetaan oppilaiden tarpeiden mukaan ja jokainen oppilas voi itsenäisesti tai parityöskentelynä 
+    toteuttaa oman pienen ohjelmointiprojektin kurssin aikana opettajan avustuksella.</p>
+
+    <h3>Kurssitiedot</h3>
+    <p>
+    Nimi: Seniorit alkeiskurssi<br>
+    Aika: torstaisin 22.1. – 7.5.2015 klo 10:30 - 13:00, sisältää n. 30 min lounastauon. <br>
+    Paikka: Tietomaan Tiedeluokka<br>
+    Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
+    Vastuullinen opettaja: Jani Vallirinne<br>
+    </p>
+    <p>Oma kannettava tietokone on pakollinen.</p>
+    <p>Lisätietoja saa suoraan opettajalta, puh. 045 124 8795.</p>
+    <br>  
+    <a class="btn-register" href="kurssitilmo4.html">Ilmoittaudu</a>
+    <br><br>
+  </div>
+  
 </div>
 
-<h3>Mikä on KoodiOulu?</h3>
+  <br>
+  <br>
+  <br>
+  
+  <div class="noticias barra-lateral">
+    <img style="float:left; margin:0 20px 0 0; width:70px; height:70px" src="res/jani.round.png">
+    <p>
+    <b>Jani</b> Jani on työskennellyt ohjelmistoalalla jo melkein kaksi vuosikymmentä sekä Nokialla että pienissä Internet -alan start-up -yrityksissä. Samalla hän on opettanut sivutoimisesti ohjelmointia Oulun AMK:lla. Tällä hetkellä hän on KoodiOulun toiminnan lisäksi tekemässä ohjelmistotuotteita omassa yrityksessään ja opiskelemassa osa-aikaisesti opettajakorkeakoulussa.
+    </p>
+  </div>
 
-<p>
-Oulussa toimintaa järjestää <a href="http://www.yritystakomo.fi/">Yritystakomolla</a> kohdanneet ohjelmoinnin 
-ja opetuksen ammattilaiset. Ryhmä ylläpitää tätä sivustoa jossa tiedotetaan toiminnasta. Koodioulu pyrkii tuomaan 
-ohjelmoinnin opetusta saataville harrastusvaihtoehdoksi sekä tukemaan kouluja antamaan laadukasta opetusta.  
-Lisätietoja löydät tämän sivun ylälaidan linkkien takaa. Ota yhteyttä, kuulemme mielellään sinusta!
-</p>
+  <div class="noticias barra-lateral">
+    <img style="float:left; margin:0 20px 0 0; width:70px; height:70px" src="res/petteri.round.png">
+    <p>
+    <b>Petteri</b> on pitkän linjan ohjelmistoalan ekspertti. Uransa hän on tehnyt tietoverkkojen ohjelmistojen parissa. Hän on Oulun yliopiston käynyt aineopettaja ja pitänyt useita ohjelmointiin ja tietokoneen käyttöön liittyviä kursseja vuosien saatossa. Petteri on  intohimoinen mobiilipelien ystävä.
+    </p>
+  </div>
 
-</div>
+</div> <!-- web-content  -->  
 			</div>
 
 <div class="col-md-3">
@@ -151,12 +292,14 @@ Lisätietoja löydät tämän sivun ylälaidan linkkien takaa. Ota yhteyttä, ku
 <div class="noticias barra-lateral">
 	<h2>Uutisia</h2>
 	<ul>
-    <li>Kaksi uutta ryhmää yhteistyössä <a href="http://www.tietomaa.fi/">Tietomaan</a> kanssa 13.12.2014. <a href="ilmoittaudu.html">Ilmoittaudu...</a></li>
+    <li>Ilmoittautuminen kevään pitkiin koodikouluihin avoinna nyt. Neljä eri ikäisten ryhmää.</li>
+    <li>Seuraavat ilmaiset koodikoulut tammikuussa. <a href="ilmoittaudu.html">Voit ilmoittautua varalle.</a></li>
+    <li>Kaksi ryhmää <a href="http://www.tietomaa.fi/">Tietomaassa</a> 13.12.2014. <a href="toimintaa.html#13122014">Lue lisää...</a></li>
     <li>Ensimmäinen Koodikoulu yhteistyössä <a href="http://www.tietomaa.fi/">Tietomaan</a> kanssa pidettiin 22.11.2014.</li>
     <li>Metsokankaan koodikoululaisten kakkospäivä pidettiin 15.11.2014. <a href="toimintaa.html#15112014">Lue lisää...</a></li>
     <li>Koodikoulu <a href="http://www.yritystakomo.fi/">Yritystakomon</a> tiloissa 8.11.2014. <a href="toimintaa.html#08112014">Lue lisää...</a></li>
     <li>"Lasten Koodikoulu tarjoaa onnistumisen kokemuksia". Uutinen Yritystakomolta. <a href="http://www.yritystakomo.fi/2014/11/lasten-koodikoulu-tarjoaa-onnistumisen-kokemuksia/">Lue lisää...</a></li>
-    <li>Metsokankaan toinen Lasten Koodikoulu pidettiin 1.11.2014. <a href="toimintaa.html#01112014">Lue lisää...</a></li>
+    <!-- li>Metsokankaan toinen Lasten Koodikoulu pidettiin 1.11.2014. <a href="toimintaa.html#01112014">Lue lisää...</a></li>  -->
 		<!-- li>Oulun ensimmäinen Lasten Koodikoulu pidettiin Metsokankaan koululla 11.10.2014. <a href="toimintaa.html#11102014">Lue lisää...</a></li>  -->
 	</ul>
 	<p class="enlace-barra-lateral"><a href="/toimintaa.html">Lisää...</a></p>

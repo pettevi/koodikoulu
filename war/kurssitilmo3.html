@@ -101,7 +101,7 @@
 		<div class="bg">
 			<div class="container">
 				<h1>Ilmoittautuminen</h1>
-				<h2>Koodikoulu 4-15 vuotiaille lapsille ja nuorille</h2>
+				<h2>Koodikoulu 12-15 vuotiaille lapsille</h2>
         <h2><br><br></h2>
 			</div>
 		</div>
@@ -121,33 +121,33 @@
 </div>
 
 <div id="contactdiv" class="form">
-	<h3>Ilmoitan lapsen tai nuoren mukaan koodikouluun</h3>
+	<h3>Ilmoittautuminen kevään 2015 koodikouluun</h3>
+	
+  <p>Oheisella lomakkeella huoltaja voi ilmoittaa lapsensa kevään koodikouluun.</p>
   <br>
-  <p>Uusia ryhmiä ei juuri nyt ole avoinna mutta otamme vastaan ilmoittautumisia varalle.</p>
+  <p>
+  Nimi: Koodikoulu 12-15 -vuotiaat<br>
+  Aika: torstai 22.1. – 7.5.2015 klo 16:15 - 18:00 (ei 5.3, 2.4, 30.4)<br>
+  Paikka: Tietomaan Tiedeluokka<br>
+  Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
+  Vastuullinen opettaja: Petteri Hämäläinen<br>
+  </p>
   <br>
-  <p>Seuraava tapahtuma on suunnitteilla tammikuulle 2015. Emme voi vielä ottaa ilmoittautumisia vastaan 
-  tähän tapahtumaan mutta varalla olijat ovat ensisijalla kun ilmoittautuminen aukeaa.</p>
+  <p>Oma kannettava tietokone on pakollinen.</p>
+  <p>Lisätietoja saa suoraan opettajalta, puh. 040 823 5645.</p>
+  <br>  
   <br>
-  <p>Paikka on Tietomaa, Nahkatehtaankatu 6, Oulu</p>
-  <br>
-  <p>Mukaan: Oma läppäri, laturi, eväät ja uteliaisuutta.</p>
-  <p>4-9 vuotiaiden ryhmässä huoltaja pitää olla mukana.</p>
-  <br>
-  <p><b>Tilaisuus on maksuton.</b></p>
-	<br>
 
 	<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
-<!-- 
-    <p>Ryhmät:</p>
-    <input type="radio" name="group" value="4-8" checked> 4-8v, torstai 17.1.2015 klo 13:00-14:30<br>
-    <input type="radio" name="group" value="9-12"> 9-12v, torstai 17.1.2015 klo 14:30-16:00<br>
-    <input type="radio" name="group" value="12-15"> 12-15v, torstai 17.1.2015 klo 16:00-18:00<br>
-    <input type="radio" name="group" value="18+"> Aikuiset, torstai 17.1.2015 klo 10:00-12:30<br> -->
-    <br>
-		<p>Osallistujan nimi <span class="required">*</span></p>
+
+    <input type="hidden" name="group" value="12-15v">
+
+		<p>Lapsen nimi <span class="required">*</span></p>
 		<input name="name" size="30" required><br><br>
-		<p>Osallistujan ikä</p>
+		<p>Lapsen ikä</p>
 		<input name="age" size="30"><br><br>
+    <p>Huoltajan nimi <span class="required">*</span></p>
+    <input name="parentname" size="30" required><br><br>
 		<p>Huoltajan sähköposti <span class="required">*</span></p>
 		<input name="email" size="30" required><br><br>
 		<p>Kysymyksiä tai kommenttia järjestäjille</p>
@@ -156,7 +156,7 @@
 		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
 		</p>
 		<br>
-    <input type="hidden" name="event" value="Tietomaa 17.1.2015" />
+    <input type="hidden" name="event" value="Tietomaa kevat 2015" />
 		<input id="submitbutton" type="submit" value="Ilmoittaudu">
 	</form>
 </div>

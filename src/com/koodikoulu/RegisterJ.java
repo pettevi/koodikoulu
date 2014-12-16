@@ -22,7 +22,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
-public class Register extends HttpServlet {
+public class RegisterJ extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws IOException {
@@ -43,13 +43,13 @@ public class Register extends HttpServlet {
         
         Properties props = new Properties();
         Session session = Session.getDefaultInstance(props, null);
-
+        
         boolean allOK = false;
         
         try {
             Message msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com"));
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
+            msg.setFrom(new InternetAddress("jani.vallirinne@gmail.com", "www.koodioulu.com"));
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("jani.vallirinne@gmail.com", ""));
             msg.setSubject("Ilmoittautuminen koodikouluun " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nRyhmä: " + group + "\nViesti: " + message);
             Transport.send(msg);
