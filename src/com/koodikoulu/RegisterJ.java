@@ -22,6 +22,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
 
+@SuppressWarnings("serial")
 public class RegisterJ extends HttpServlet {
 
 	public void doGet(HttpServletRequest req, HttpServletResponse resp)
@@ -48,7 +49,7 @@ public class RegisterJ extends HttpServlet {
         
         try {
             Message msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("jani.vallirinne@gmail.com", "www.koodioulu.com"));
+            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("jani.vallirinne@gmail.com", ""));
             msg.setSubject("Ilmoittautuminen koodikouluun " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nRyhmä: " + group + "\nViesti: " + message);
