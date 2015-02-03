@@ -51,7 +51,7 @@ public class RegisterJ extends HttpServlet {
             Message msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com"));
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("jani.vallirinne@gmail.com", ""));
-            msg.setSubject("Ilmoittautuminen koodikouluun " + event);
+            msg.setSubject("Ilmoittautuminen " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nRyhmä: " + group + "\nViesti: " + message);
             Transport.send(msg);
             allOK = true;

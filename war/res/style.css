@@ -85,7 +85,7 @@ blockquote:before { content: none; }
 blockquote footer {	font-size: inherit; }
 
 /*BARRA LATERAL*/
-.barra-lateral{background:#f4f4f4; padding:20px; margin-bottom:20px; margin-left:-20px; margin-right:0;}
+.barra-lateral {background:#f4f4f4; padding:20px; margin-bottom:20px; margin-left:-20px; margin-right:0;}
 .barra-lateral h2{font-size:14px; font-weight:600; margin-left:0px; transition:all 0.5s ease 0s; line-height:18px; text-transform:uppercase; color:#2E95B6;	margin-top:0px;}
 .barra-lateral ul {padding:0; list-style:none; margin-top:15px; margin-bottom:0;}
 .barra-lateral li{color:#808080; margin-bottom:7px; font-size:14px; padding-bottom:7px; text-align:left; border-bottom:1px solid #ddd;}
