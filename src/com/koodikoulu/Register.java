@@ -38,6 +38,7 @@ public class Register extends HttpServlet {
         String age = req.getParameter("age");
         String parentname = req.getParameter("parentname");
         String email = req.getParameter("email");
+        String tel = req.getParameter("tel");
         String message = req.getParameter("message");
         String event = req.getParameter("event");
         String group = req.getParameter("group");
@@ -51,8 +52,8 @@ public class Register extends HttpServlet {
             Message msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com")); // pakko olla pete.hamalainen@gmail.com
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
-            msg.setSubject("Ilmoittautuminen koodikouluun " + event);
-            msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nRyhmä: " + group + "\nViesti: " + message);
+            msg.setSubject("Ilmoittautuminen " + event);
+            msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nPuh: " + tel + "\nRyhmä: " + group + "\nViesti: " + message);
             Transport.send(msg);
             allOK = true;
         } catch (AddressException e) {

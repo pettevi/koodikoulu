@@ -22,13 +22,17 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 
 /*CABECERA*/
 .cabecera {background: #ffffff url("background.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:0;}
+.cabecera.frontpage {background: #ffffff url("legobg.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:0;}
 .cabecera.ilmoittautuminen {background-image: url("class.jpg");}
 .cabecera.otayhteytta {background-image: url("letter.jpg");}
 .cabecera.toimintaa {background-image: url("action.png");}
 .cabecera.kurssit {background-image: url("tietomaa.jpg");}
-.cabecera .bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
-.cabecera .bg h1 {color:#fff; margin-top:80px; font-weight:300;}
-.cabecera .bg h2 {color:#fff; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0}
+.frontpage .bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
+.frontpage .bg h1 {color:#178ec9; margin-top:80px; font-weight:bold;/*font-weight:300*/}
+.frontpage .bg h2 {color:#000; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0}
+.bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
+.bg h1 {color:#fff; margin-top:80px; font-weight:300}
+.bg h2 {color:#fff; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0}
 #abc {margin:0 0 15px 0}
 
 /*CONTENT*/
