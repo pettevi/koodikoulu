@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Koodioulu</title>
+  <title>KoodiOulu</title>
 
   <meta name="author" content="KoodiOulu" />
   <meta name="description" content="Lasten koodikoulu asiantuntijavoimin" />
@@ -16,7 +16,7 @@
   <meta property="og:title" content="Koodioulu - Lasten Koodikoulu" />
   <meta property="og:site_name" content="Koodioulu"/>
   <meta property="og:url" content="http://www.koodioulu.fi" />
-  <meta property="og:description" content="KoodiOulu järjestää koodauksen opetusta lapsille Oulussa. Kaikki asiasta innostuneet ovat tervetulleita ilman alkuvaatimuksia. Tule mukaan koodaamaan!" />
+  <meta property="og:description" content="KoodiOulu järjestää koodauksen opetusta lapsille Oulussa." />
   <meta property="og:image" content="http://www.koodioulu.com/res/fbpreview.png" />
   <meta property="fb:admins" content="787886531" />
 
@@ -29,6 +29,11 @@
   <script src="http://malsup.github.com/jquery.form.js"></script> 
   <script src="res/jquery-ui-1.10.4.min.js"></script>
   
+  <link rel="stylesheet" href="flexslider.css" type="text/css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="jquery.flexslider.js"></script>
+
   <script> 
     $(function(){
       $("#footerInclude").load("footer.html"); 
@@ -44,18 +49,26 @@
     ga('send', 'pageview'); 
   </script>
 
-  <script>
-  $(function() {
-    $( "#tabs" ).tabs({
-        activate: function(event ,ui){
-            ui.newPanel[0].style.opacity  = 0.2;
-            ui.newPanel.animate({opacity : 1}, 0 );
-        }
-    });
+<script>
+//Can also be used with $(document).ready()
+$(window).load(function() {
+  $('.flexslider').flexslider({
+    animation: "slide",
+    	slideshowSpeed:3000,
+        controlNav:true,
+        directionNav:true,
+        pauseOnHover:false,
+        direction:"horizontal",
+        reverse:false,
+        animationSpeed:600,
+        prevText:false,
+        nextText:false,
+        slideshow:true
   });
-  </script>
-
+});
+</script>
 </head>
+
 <body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
 
   <nav class="navbar navbar-default" role="navigation">
@@ -83,12 +96,10 @@
   
 <div id="page">
 
-  <div class="cabecera product">
+  <div class="cabecera kevat2015">
     <div class="bg">
       <div class="container">
-        <h1>Pitkät Koodikoulut Keväällä 2015</h1>
-        <h2>Lapsille ja nuorille</h2>
-        <h2>Kysy rohkeasti jos haluat matkaan</h2>
+        <h1>Koodikerho Keväällä 2015</h1>
       </div>
     </div>
   </div>
@@ -98,139 +109,86 @@
             <div class="col-md-9">
         <div class="web-content">
 
-  <h3>Tervetuloa Koodikouluun</h3>
+  <h3>Tervetuloa Oulun ensimmäiseen Koodikerhoon</h3>
   
-  <p>Tietomaa ja KoodiOulu järjestävät yhteistyössä Oulun ensimmäiset koko kevätlukukauden mittaiset koodikoulut. 
-  Koodikouluissa opetellaan tietokoneohjelmointia sekä kehitetään kykyä pilkkoa ongelma osiin, antaa yksikäsitteisiä 
-  komentoja tietokoneelle ja pohtia, mitkä komennot ratkaisevat ongelman.</p>
+  <p>Tietomaa ja KoodiOulu järjestivät yhteistyössä Oulun ensimmäisen koko kevätlukukauden mittaisen koodikerhon keväällä 2015.
+  Koodikerhossa opeteltiin ohjelmointia Java kielellä osallistujien toivomalla tavalla, tekemällä omaa peliä.
+  </p>
   
-  <blockquote>
-  Yhä suuremman osan maailmasta rakentavat he, jotka osaavat luoda taidetta tai tiedettä tai vaikkapa älypuhelinsovelluksia 
-  ja internetpalveluita tietokoneiden avulla.
-  <footer><cite><a href="http://www.koodi2016.fi">www.koodi2016.fi</a></cite></footer>
-  </blockquote>
-  
-  <p>Koodikoulua järjestetään useille ryhmille. Nuorimpien ryhmissä opitaan leikkien kautta, vanhempien ryhmissä koodataan eri 
-  ohjelmointikielillä. Tavoitteena on, että jokainen osallistuja voi edetä omien taitojensa mukaan. Ohjelmointia ei voi oppia 
-  kuin itse tekemällä.</p>
-  
-  <h3>Keväällä 2015 alkavien pitkien ryhmien kuvaukset</h3>
+  <p>Koodikerho oli suunnattu peruskoululaisille jotka jo olivat hankkineet osaamista tietokoneen käyttöön. Ohjelmointiosaaminen ei
+  kuitenkaan ollut alkuvaatimuksena. Osallistujien ikähaarukka vaihteli 9-14 vuoden välillä painottuen keskivaiheille. Suurimmalla 
+  osalla siis oli jo hyvät perusteen matematiikasta ja englannin kielestä jotka ovat ehdottoman tarpeellisia ohjelmoinnissa. 
+  </p>
 
-<div id="tabs" class="kuvaus">
-  <ul>
-    <li><div><a href="#tabs-1">Koodikoulu 4-8 -vuotiaat</a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
-    <li><div><a href="#tabs-2">Koodikoulu 9-12 -vuotiaat</a><p class="ui-tabs-tilatieto">RYHMÄ ON TÄYNNÄ</p></div></li>
-    <li><div><a href="#tabs-3">Koodikoulu 12-15 -vuotiaat</a><p class="ui-tabs-tilatieto">Kurssilla on tilaa</p></div></li>
-  </ul>
+  <p>
+  <img class="aligncenter" src="pelit/koodikoulu.jpg" width="600" height="350">
+  </p>
+
+  <h3>Kurssin sisältö</h3>
   
-  <p><i>*Ikärajat ovat suosituksia, ota yhteyttä opettajaan jos haluat valita sopivimman ryhmän.</i></p>
+  <p>Kurssin sisältö oli suunniteltu sen mukaan, että osallistujat voisivat tehdä joko hyötyohjelmaa, nettisaittia tai peliä ja vieläpä
+  hieman eri työkaluilla. Kaikilla osallistujilla kuitenkin oli toive saada tehdä peliä jonka johdosta työkaluksi valikoitui 
+  <a href="http://www.greenfoot.org/">Greenfoot</a>.
+  </p>
+
+  <p>Greenfoot on Javan päälle rakennettu pelikirjasto jolla on helppo toteuttaa esimerkiksi näppäimistönluku ja pelihahmojen liikutus.
+  Greenfoot on itsessään myös kehitystyökalu ja kääntäjä josta on karsittu pois ylimääräisiä toimintoja ja saatu pidettyä
+  käyttöliittymä helppona käyttää ja oppia.
+  </p>
+
+  <p>Kurssin aikana tutustuttiin Java kieleen, opeteltiin koodauksen perustermistöä kuten ohjemointirajapinta tai mitä 
+  tarkoittaa kääntäminen sekä tietysti harjoiteltiin ohjelmoinnin perusteita. Ohjelmoinnin perusrakenteista keskityttiin 
+  ehtolauseeseen sekä yllättävän vaikeaksi osoittautuneeseen asiaan, muuttujien käyttöön.
+  </p> 
+
+  <p>Grafiikkaa, ääniä ja musiikkia käytettiin ilmaisista nettipalveluista kuten <a href="http://spritedatabase.net">Sprite Database</a>.
+
+  <h3>Valmistuneet pelit</h3>
   
-  <div id="tabs-1">
-    <h3>Kurssikuvaus: Koodikoulu 4-8 -vuotiaat</h3>
-    
-    <p>Tietomaassa käynnistetään pienille lapsille oma koodikoulu. Koodikoulussa opitaan ohjelmoinnin leikkien ja pelien kautta
-     ja myös itse ohjelmia tuottaen. Lukutaito ei ole välttämätön, pienetkin oppilaat oppivat ohjelmoimaan yksinkertaisia 
-     ohjelmia! Lukutaidottomat oppilaat tarvitsevat kuitenkin huoltajan mukaan.</p> 
-     
-    <p>Kurssin jälkeen oppilaat ymmärtävät ja osaavat tietokoneen ohjelmoinnin perusasiat ja pystyvät tekemään yksinkertaisia 
-    ohjelmia. Kurssin jälkeen oppilaiden asenne tietokoneisiin on avoin ja kokeileva ja he pystyvät pilkkomaan ongelmia 
-    pienemmiksi helposti ratkaistaviksi osiksi.</p>
+  <p>Koodikerhossa valmistui kevään aikana seitsemän peliä. Jokainen kerholainen suunnitteli jonkin pelin itse. Kuitenkin osa teki pelin 
+  valmiiksi asti ryhmätyönä. 
+  </p>
 
-    <h3>Kurssitiedot</h3>
-    <p>
-    Nimi: Koodikoulu 4-8 -vuotiaat<br>
-    Aika: torstai 22.1. – 9.5.2015 klo 13:30 - 14:15 (ei 5.3,  2.4. ja 30.4.)<br>
-    Paikka: Tietomaan Tiedeluokka<br>
-    Hinta: 150€ kevätlukukausi, sisältää 13 kertaa<br>
-    Vastuullinen opettaja: Jani Vallirinne<br>
-    </p>
-    <p>Oma kannettava tietokone on pakollinen.</p>
-    <p>Lisätietoja saa suoraan opettajalta, puh. 045 124 8795.</p>
-    <br>  
-    <a class="btn-register" href="kurssitilmo1.html">Ilmoittaudu</a>
-    <br><br>
-  </div>
+	<div class="flexslider-container">
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li >
+		      <img src="pelit/coins.png" />
+		    </li>
+		    <li >
+		      <img src="pelit/freddy.png" />
+		    </li>
+		    <li >
+		      <img src="pelit/karate.png" />
+		    </li>
+		    <li>
+		      <img src="pelit/pixels.png" />
+		    </li>
+		    <li>
+		      <img src="pelit/shootemup.png" />
+		    </li>
+		    <li>
+		      <img src="pelit/key.png" />
+		    </li>
+		    <li>
+		      <img src="pelit/autopeli.png" />
+		    </li>
+		  </ul>
+		</div>
+	</div>
   
-  <div id="tabs-2">
-    <h3>Kurssikuvaus: Koodikoulu 9-12 -vuotiaat</h3>
-    
-    <p>Tietomaassa käynnistetään 3.-6. luokan oppilaille oma koodikoulu. Tietokoneen käyttötaitoa ei tarvita ennestään vaan 
-    kurssilla opetetaan samalla tarvittavat taidot. </p> 
-    
-    <p>Ryhmässä käydään perusteista lähtien läpi ohjelmointiin liittyviä asioita internetin toiminnasta ja pilviteknologiasta, 
-    turvallisesta netinkäytöstä, Windows käyttöjärjestelmästä ja tietysti erilaisia ohjelmointialustoja ja -kieliä. Kurssi 
-    tähtää siihen, että oppilas osaa ajatella järjestelmällisesti ja täsmällisesti pystyäkseen pilkkoakseen ohjelmointiongelmat 
-    pieniin ratkaistaviin osiin ja ohjelmoimaan niihin ratkaisun. Kurssin jälkeen oppilas osaa käyttää tietokonetta sujuvasti 
-    ja itsenäisesti ja tuottamaan yksinkertaisia ohjelmia.</p>
-    
-    <p>Kurssilla oppilas saa eväitä myös turvalliseen netinkäyttöön ja lähdekritiikkiin Internetissä. Koodikoulussa rohkaistaan 
-    jokaista oppilaista harjoittelemaan asioita laaja-alaisesti myös kotona. </p>
-
-    <h3>Kurssitiedot</h3>
-    <p>
-    Nimi: Koodikoulu 9-12 -vuotiaat<br>
-    Aika: torstai 22.1. – 7.5.2015 klo 14:30 - 16:00 (ei 5.3, 2.4, 30.4)<br>
-    Paikka: Tietomaan Tiedeluokka<br>
-    Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
-    Vastuullinen opettaja: Jani Vallirinne<br>
-    </p>
-    <p>Oma kannettava tietokone on pakollinen.</p>
-    <p>Lisätietoja saa suoraan opettajalta, puh. 045 124 8795.</p>
-    <br>  
-    <a class="btn-register" href="kurssitilmo2.html">Ilmoittaudu</a>
-    <br><br>
-  </div>
+  <p>Kerhon lopuksi pelit esiteltiin huoltajille avointen ovien tilaisuudessa. Mukaan oli kutsuttu myös Oululehti joka kirjoittikin
+  <a href="http://epaper.suomenmaa.fi/olepaper/epaper/20150513/#page/16">Pixels-pelistä mahtavan artikkelin</a>.</p>
   
-  <div id="tabs-3">
-    <h3>Kurssikuvaus: Koodikoulu 12-15 -vuotiaat</h3>
-    
-    <p>Nyt pärähtää. Tietomaassa käynnistetään tietokoneiden peruskäytön jo osaaville koululaisille oma koodikoulu. 
-    Ryhmässä käydään perusteista lähtien läpi laajalti ohjelmointiin liittyviä asioita internetin toiminnasta ja 
-    pilviteknologiasta, turvallisesta netinkäytöstä ja Windows käyttöjärjestelmästä sekä opetellaan koodaamaan netin 
-    suosituimmalla ohjelmointikielellä Javalla.</p>
-
-    <p>Koodikoulussa rohkaistaan jokaista oppilaista harjoittelemaan asioita laaja-alaisesti. Oppilaiden henkilökohtaiset 
-    mieltymykset huomioon ottaen kurssin aikana toteutetaan pienimuotoinen ohjelmistoprojekti. Kurssi tähtää
-    siihen, että oppilas pystyy itsenäisesti koodaamaan pelin, ohjelman tai nettisaitin sekä julkaisemaan sen.</p>
-
-    <p>Lähinnä yläkoululaisille tarkoitetussa koodikoulussa hyödyksi on jos oppilaalla on harjaantuneisuus käyttää omaa 
-    konettaan sujuvasti, on opiskellut englannin kieltä sekä osaa käyttää netin suosituimpia palveluja kuten YouTube ja
-    gmail. Varsinaista ohjelmointikokemusta ei tarvita kunhan osallistujalla on vahva kiinnostuneisuus asiaan.</p>
-
-    <h3>Kurssitiedot</h3>
-    <p>
-    Nimi: Koodikoulu 12-15 -vuotiaat<br>
-    Aika: torstai 22.1. – 7.5.2015 klo 16:15 - 18:00 (ei 5.3, 2.4, 30.4)<br>
-    Paikka: Tietomaan Tiedeluokka<br>
-    Hinta: 200€ kevätlukukausi, sisältää 13 kertaa<br>
-    Vastuullinen opettaja: Petteri Hämäläinen<br>
-    </p>
-    <p>Oma kannettava tietokone on pakollinen.</p>
-    <p>Lisätietoja saa suoraan opettajalta, puh. 040 823 5645.</p>
-    <br>  
-    <a class="btn-register" href="kurssitilmo3.html">Ilmoittaudu</a>
-    <br><br>
-  </div>
+  <h3>Yhteenveto</h3>
   
-</div>
-
-  <br>
-  <br>
-  <br>
-  
-  <div class="noticias barra-lateral">
-    <img style="float:left; margin:0 20px 0 0; width:70px; height:70px" src="res/jani.round.png">
-    <p>
-    <b>Jani</b> Jani on työskennellyt ohjelmistoalalla jo melkein kaksi vuosikymmentä sekä Nokialla että pienissä Internet -alan start-up -yrityksissä. Samalla hän on opettanut sivutoimisesti ohjelmointia Oulun AMK:lla. Tällä hetkellä hän on KoodiOulun toiminnan lisäksi tekemässä ohjelmistotuotteita omassa yrityksessään ja opiskelemassa osa-aikaisesti opettajakorkeakoulussa.
-    </p>
-  </div>
-
-  <div class="noticias barra-lateral">
-    <img style="float:left; margin:0 20px 0 0; width:70px; height:70px" src="res/petteri.round.png">
-    <p>
-    <b>Petteri</b> on pitkän linjan ohjelmistoalan ekspertti. Uransa hän on tehnyt tietoverkkojen ohjelmistojen parissa. Hän on Oulun yliopiston käynyt aineopettaja ja pitänyt useita ohjelmointiin ja tietokoneen käyttöön liittyviä kursseja vuosien saatossa. Petteri on  intohimoinen mobiilipelien ystävä.
-    </p>
-  </div>
+  <p>Koodikerho oli kokonaisuudessaan hieno ja opettavainen kokemus. Korjattavaakin kyllä löytyi ja virheistä pitää ottaa oppia kun
+  seuraavaa kerhoa suunnitellaan. Esimerkiksi vaikka Greenfoot on erinomainen ympäristö juuri Java kielen opetteluun, tuottavuus sen
+  kanssa on niin alhainen ettei kerholaiset kerkeä toteuttamaan ideoitaan kun aika kuluu ohjelmakoodin ymmärtämiseen. Toinen, ei niinkään
+  ongelma vaan lähinnä järjestelykysymys on, että jokaisella osallistujalla pitää olla mahdollisuus ottaa kaveri mukaan. 
+  Usein unohdettu puoli tietokoneiden käytössä on sosiaalinen kanssakäyminen joka on erittäin tärkeä, 
+  kukaan ei halua koodata yksin.
+  </p>
 
 </div> <!-- web-content  -->  
       </div>

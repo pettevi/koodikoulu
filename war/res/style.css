@@ -11,7 +11,7 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .required {font-weight:bold; color:#F00;}
 
 /*NAV*/
-.navbar {/*position: fixed; right: 0; top: 0;*/display: block; background-color:#252525; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.55); margin-bottom:0; z-index: 15; width:100%; border-radius:0; border:0;}
+.navbar {position: fixed; right: 0; top: 0;display: block; background-color:#66B254; box-shadow:0px 2px 2px rgba(0, 0, 0, 0.55); margin-bottom:0; z-index: 15; width:100%; border-radius:0; border:0;}
 .navbar > .container .navbar-brand {padding:8px 0px; margin-left:-8px; height:65px;}
 .navbar-brand  img{height:65px; width:auto;}
 .navbar a {font-weight:300; font-size:16px; color:#2E95B6;}
@@ -21,19 +21,18 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .navbar-nav > li > a {padding:30px 20px 25px;}
 
 /*CABECERA*/
-.cabecera {background: #ffffff url("background.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:0;}
-.cabecera.frontpage {background: #ffffff url("legobg.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:0;}
+.cabecera {background: #ffffff url("background.png") no-repeat scroll left top; background-size: cover; height: 100%; width: 100%; border:none; margin-top:65px;}
 .cabecera.ilmoittautuminen {background-image: url("class.jpg");}
 .cabecera.otayhteytta {background-image: url("letter.jpg");}
 .cabecera.toimintaa {background-image: url("action.png");}
-.cabecera.kurssit {background-image: url("tietomaa.jpg");}
-.frontpage .bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
-.frontpage .bg h1 {color:#178ec9; margin-top:80px; font-weight:bold;/*font-weight:300*/}
-.frontpage .bg h2 {color:#000; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0}
-.bg {background-image: url("bg.png"); background-position: right bottom; background-size: 100% auto; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
-.bg h1 {color:#fff; margin-top:80px; font-weight:300}
-.bg h2 {color:#fff; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0}
-#abc {margin:0 0 15px 0}
+.cabecera.kouluille {background-image: url("kouluillebg.jpg");}
+.cabecera.kevat2015 {background-image: url("tietomaa.jpg");}
+.cabecera.syksy2015 {background-image: url("pelikoulu.png");}
+.cabecera.koodikoulu {background-image: url("koodikoulubg.png");}
+.bg {background-image: url("100tekoa_logo.png"); background-position: 99% 96%; background-size: 170px 97px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
+.bg h1 {color:#fff; display: inline-block; font-weight:300; margin:80px 0 5px 0; padding: 2%; bottom: 0; background: rgba(0, 0, 0, .6); text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);}
+.bg h2 {color:#fff; display: inline-block; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0; padding: 2%; bottom: 0; background: rgba(0, 0, 0, .6); text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);}
+.padding-container {padding:25px 0 0 0}
 
 /*CONTENT*/
 .title-content {color:#178ec9; font-size:28px; margin-bottom:15px; line-height:40px; padding-right: 50px;}
@@ -46,10 +45,12 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .web-content table {margin-top:20px;}
 .web-content .aligncenter {display:block; margin:auto; border: solid 1px gray}
 .web-content .form p{margin:0;}
+.bordered {display:block; margin:auto; border: solid 1px gray ;border-radius: 20px;}
+
 
 /*OTA YHTEYTTA*/
 .person {box-shadow:1px 1px 2px rgba(0, 0, 0, 0.25); display:block; margin:0 10px 10px 0; min-width: 100px; max-width:226px; max-height:270px}
-.tablecell {display: table-cell; padding: 0 10px 0 0;}
+.tablecell {display: table-cell; padding: 0 10px 0 0; vertical-align: middle;}
 
 .person {
   -webkit-transition: all 0.15s ease;
@@ -64,14 +65,6 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
        -o-transform: rotate(7deg);
       -ms-transform: rotate(7deg);
           transform: rotate(7deg);
-}
-
-.jani:hover {
-  -webkit-transform: rotate(-4deg);
-     -moz-transform: rotate(-4deg);
-       -o-transform: rotate(-4deg);
-      -ms-transform: rotate(-4deg);
-          transform: rotate(-4deg);
 }
 
 /*KURSSIT*/
@@ -89,12 +82,13 @@ blockquote:before { content: none; }
 blockquote footer {	font-size: inherit; }
 
 /*BARRA LATERAL*/
-.barra-lateral {background:#f4f4f4; padding:20px; margin-bottom:20px; margin-left:-20px; margin-right:0;}
+.barra-lateral {background:#FFFFdd; padding:20px; margin-bottom:20px; margin-left:-20px; margin-right:0;}
 .barra-lateral h2{font-size:14px; font-weight:600; margin-left:0px; transition:all 0.5s ease 0s; line-height:18px; text-transform:uppercase; color:#2E95B6;	margin-top:0px;}
 .barra-lateral ul {padding:0; list-style:none; margin-top:15px; margin-bottom:0;}
 .barra-lateral li{color:#808080; margin-bottom:7px; font-size:14px; padding-bottom:7px; text-align:left; border-bottom:1px solid #ddd;}
 .barra-lateral li:last-child {border:none; padding-bottom:0; margin-bottom:0;}
 .barra-lateral.descargas {background: none; text-align:center; padding-left:22px;}
+.satatekoa p{text-decoration:none; color:#808080; margin: 10px 10px 0 10px; text-align: center;}
 .barra-lateral a{text-decoration:none; color:#2E95B6;}
 .barra-lateral a:hover{color:#2E95B6;text-decoration:underline;}
 .enlace-barra-lateral {text-align:right; margin-bottom:0; margin-top:15px; font-size:11px;}
@@ -120,12 +114,12 @@ blockquote footer {	font-size: inherit; }
 #tabs-1, #tabs-2, #tabs-3, #tabs-4 { transition: opacity 0.4s ease-in-out; background: #fff url("soita.png") no-repeat left 200px bottom;}
 
 /*FOOTER*/
-.subfooter {border-top:1px solid #555555; background:#252525; margin-top:70px; color:#777; padding-bottom:20px; font-size:13px;}
-.subfooter a{color:#0090D1; transition:all 0.4s ease 0s;}
-.subfooter a:hover {color:#08608f; text-decoration:none; transition:all 0.4s ease 0s;}
-.subfooter h3 {color: #BBBBBB; font-size: 15px; font-weight: 400; margin: 30px 0 5px;}
-.subfooter .divider {background:#777777; border: medium none; height:1px;margin-bottom:15px;}
-.subfooter .divider span {background-color: #0090D1; display: block; height: 1px; width: 70px;}
+.subfooter {border-top:0px solid #555555; background:#66B254; margin-top:70px; color:#777; padding-bottom:20px; font-size:13px;}
+.subfooter a{color:#063600; transition:all 0.4s ease 0s;}
+.subfooter a:hover {color:#fff; text-decoration:none; transition:all 0.4s ease 0s;}
+.subfooter h3 {color: #063600; font-size: 15px; font-weight: 400; margin: 30px 0 5px;}
+.subfooter .divider {background:#063600; border: medium none; height:1px;margin-bottom:15px;}
+.subfooter .divider span {background-color: #770000; display: block; height: 1px; width: 70px;}
 .subfooter .productos ul {padding:0;list-style:none; margin:0; font-size: 12px;}
 .subfooter .productos li {margin-bottom:3px;}
 .subfooter .productos a {font-weight:600; margin-right:5px; font-size:13px;}
@@ -138,9 +132,15 @@ blockquote footer {	font-size: inherit; }
 .footer {font-size: 10px; background:#0090D1; padding:5px 0; font-size:10px; color:#fff;}
 .footer a {color:#fff; text-decoration:none; transition:all 0.4s ease 0s;}
 .footer a:hover {color:#053e5c; text-decoration:none; transition:all 0.4s ease 0s;}
+ 
+ /*FLEX SLIDER*/
+.flexslider-container {padding-right: 0}
+.flexslider-container ul {list-style:none; padding: 0;}
+.flexslider-container ul li {background: none; padding:0; }
+.flexslider-padding  {background: none; padding:65px 0 0 0; }
 
 /*RESPONSIVE*/
-@media (max-width: 768px){
+@media (max-width: 768px) {
 	.customize-support {padding-top:46px;}
 	.navbar-nav {margin: 0;}
 	.navbar > .container .navbar-brand {margin-left:10px;}
@@ -160,5 +160,6 @@ blockquote footer {	font-size: inherit; }
 	.listado-noticias, .contenido-noticia {padding-right:15px;}
 	.web-partners ul li{width:100%; text-align:center;}
 	.playerframe {width:279px;height:185px}
+	.bg {background-image: url("100tekoa_logo.png"); background-position: 99% 99%; background-size: 84px 48px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
   #player {width:320px;height:195px}
 }
