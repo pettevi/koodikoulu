@@ -50,7 +50,7 @@ public class Register extends HttpServlet {
         
         try {
             Message msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.com")); // pakko olla pete.hamalainen@gmail.com
+            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.fi")); // pakko olla pete.hamalainen@gmail.com
             msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
             msg.setSubject("Ilmoittautuminen " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nPuh: " + tel + "\nRyhmä: " + group + "\nViesti: " + message);
@@ -61,7 +61,25 @@ public class Register extends HttpServlet {
         } catch (MessagingException e) {
             // ...
         }
-		Key key = KeyFactory.createKey("Koodioulu", event);
+
+        if (allOK)
+        try {
+            Message msg = new MimeMessage(session);
+            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "Petteri Hamalainen")); // pakko olla pete.hamalainen@gmail.com
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress(email, email));
+            msg.setSubject("Ilmoittautuminen " + event);
+            msg.setText("Hei,\n\nTämä on automaattinen vahvistus. Olen saanut ilmoittautumisen tästä sähköpostiosoitteesta " + 
+              "alla olevilla tiedoilla. Jos haluatte kysyä jotain voitte vastata tähän viestiin, palaan asiaan niin pian kuin voin. \n\nTerveisin, Petteri \n\nNimi: " +
+              name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nViesti: " + message);
+            Transport.send(msg);
+            allOK = true;
+        } catch (AddressException e) {
+            // ...
+        } catch (MessagingException e) {
+            // ...
+        }
+
+        Key key = KeyFactory.createKey("Koodioulu", event);
 		Entity person = new Entity("person", key);
 
 		person.setProperty("event", event);
@@ -83,7 +101,7 @@ public class Register extends HttpServlet {
 		}
 		else
 		{
-			resp.sendRedirect("/ilmoittaudu.html");
+			//resp.sendRedirect("/ilmoittaudu.html");
 		}
 	}
 

@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Ilmoittautuminen</title>
+	<title>Pelikoulu</title>
 		
   <meta name="author" content="KoodiOulu">
   <meta name="description" content="Lasten koodikoulu asiantuntijavoimin">
@@ -18,8 +18,9 @@
   <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>  
   <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>  
 
-  <script src="res/jquery-2.1.0.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="res/jquery-ui-1.10.4.min.js"></script>
+  
   <script> 
     $(function(){
       $("#footerInclude").load("footer.html"); 
@@ -27,37 +28,31 @@
   </script> 
   
   <script src="http://malsup.github.com/jquery.form.js"></script> 
-  <script type="text/javascript" src="res/bootstrap.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  <script language="javascript" type="text/javascript">
-  function OpenThankYou()
-  {
-      document.getElementById('thankyoumessage').style.display='block';
-      document.getElementById('contactdiv').style.display='none';
-      document.getElementById('submitbutton').disabled=false;
-      document.getElementById('submitbutton').value='Ilmoittaudu';
-  }
-  
-  function CloseThankYou()
-  {
-      document.getElementById('thankyoumessage').style.display='none';
-      document.getElementById('contactdiv').style.display='block';
-  }
+  <script type="text/javascript">
   function captureForm()
   {
 	  document.getElementById('submitbutton').disabled=true;
-    document.getElementById('submitbutton').value='Pieni hetki';
+      document.getElementById('submitbutton').value='Pieni hetki';
   }
   </script>
   
   <script> 
     $(document).ready(function() { 
         $('#contactform').ajaxForm(function() { 
-          OpenThankYou();
+    	  $("#myModal").modal('show');
+          document.getElementById('submitbutton').disabled=false;
+          document.getElementById('submitbutton').value='Ilmoittaudu';
+          document.getElementById('name').value='';
+          document.getElementById('age').value='';
+          document.getElementById('email').value='';
+          document.getElementById('parentname').value='';
+          document.getElementById('message').value='';
         }); 
      }); 
   </script>
-  
+
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -68,7 +63,7 @@
   </script>
 
 </head>
-<body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
+<body>
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container">
@@ -95,10 +90,10 @@
 	
 <div id="page">
 
-	<div class="cabecera syksy2015">
+	<div class="cabecera pelikoulu">
 		<div class="bg">
 			<div class="container">
-				<h1>Ilmoittautuminen</h1>
+				<h1>Tietokonepelien suunnittelukoulu</h1>
 				<br><br><br>
 			</div>
 		</div>
@@ -116,10 +111,13 @@
 	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu alkaa syksyllä 2015. 
 	</p>
 
-	<p>KoodiOulu:n ja Oulu Game Lab:n järjestämä pelisuunnittelukoulu on paras paikka lapsen tai nuoren 
+	<p>KoodiOulu:n ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu 
+	on paras paikka lapsen ja nuoren 
 	alkavalle tietokoneharrastukselle. Pelikoulu ei ole vain ohjelmointia tai pelaamista, se on yhdessä 
 	tekemistä ja luovuutta. Se on uusien taitojen kartuttamista tulevaisuutta varten.</p>
 
+	<h2>Sisältö</h2>
+	
 	<p>
 	Pelikoulussa käydään perusteista lähtien läpi laajalti pelien suunnitteluun ja tekoon liittyviä asioita. 
 	Koulun aikana opitaan tietokoneen käyttöä, peli-idean suunnittelua ja sen toteutusta, ohjelmistoprojektin hallintaa,  
@@ -130,58 +128,60 @@
 	Käytämme paljon internetin palveluja tietolähteenä. Pelikoulussa tehdään oma peliprojekti joko pareittain tai itsenäisesti.
     Kurssi tähtää siihen, että osallistuja pystyy tekemään oman pelin sekä mahdollisesti julkaisemaan sen. 
     Koulussa keskitytään luovuuteen.
-	</p>	
+	</p>
 
 	<p>
-	Käytössä olevat ohjelmat ovat englannin kielellä. Hyödyksi onkin, jos
-	osallistuja on opiskellut englannin kieltä, hänellä on harjaantuneisuus käyttää omaa konettaan sujuvasti sekä hallitsee 
-	tiedon haun netistä. Varsinaista ohjelmointikokemusta ei tarvita. Käytämme paljon ilmaisia ohjelmia mutta osallistumismaksuun
-	kuuluu käytetyn pelinteko-ohjelmiston täysi lisenssi.
+    Pelikoulussa tulee käymään vierailulla Game Labin 
+    vapaaehtoisia jotka kertovat työstään ja tuovat mukanaan osaamistaan kerholaisille. Osa 
+    kokoontumiskerroista tuleekin olemaan sisällöltään tietyn aiheen mukaisia. 
 	</p>
+
+	<p>
+    Pelikoulun lopuksi järjestetään julkistus jossa osallistujat saavat esitellä valmiit tuotokset.
+    </p>
+
+	<h2>Vaatimukset</h2>
 	
+	<p>
+	Käytössä olevat ohjelmat ovat englannin kielellä. Hyödyksi onkin, jos
+	osallistuja on opiskellut englantia, hänellä on harjaantuneisuus käyttää omaa konettaan sujuvasti sekä hallitsee 
+	tiedon haun netistä. Varsinaista ohjelmointikokemusta ei tarvita. Käytämme paljon ilmaisia ohjelmia mutta osallistumismaksuun
+	kuuluu myös käytetyn pelinteko-ohjelmiston täysi lisenssi.
+	</p>
+
 	<p>
 	Ikäsuositus pelikoulussa on yli 10 vuotta (4. luokkalaiset ja vanhemmat). Toivotamme kyllä kaikki kiinnostuneet mukaan.
 	</p>
 
-	<p>
-    Pelikoulu toteutetaan yhteistyössä OAMK:n ja Oulu Game Labin kanssa. Pelikoulussa tulee käymään vierailulla Game Labin 
-    pelisuunnittelijaopiskelijoita jotka kertovat työstään ja tuovat mukanaan osaamistaan kerholaisille. Osa 
-    kokoontumiskerroista tuleekin olemaan sisällöltään jonkin tietyn aiheen mukainen. 
-	</p>
-	
-	<p>
-    Pelikoulun lopuksi järjestetään juhla jossa esitellään kaikki valmiit tuotokset.
-    </p>
+	<p>Oma kannettava Microsoft Windows tietokone on pakollinen. Järjestelmävaatimukset: Windows 7 tai uudempi,
+	2 GB RAM, 2 GHz tuplaydinprosessori, nVidia tai AMD grafiikkakortti.</p>
 
-	<h3>Kurssitiedot</h3>
+	<h2>Kurssitiedot</h2>
 	
 	<p>Ikäsuositus: 10-15 -vuotiaat<br>
 	Aika: tiistai 25.8. – 24.11.2015 klo 16:30 - 18:30 (ei 20.10, 17.11)<br>
-	Paikka: <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>, Torikatu 23, 4. kerros (Finnkinoa vastapäätä)<br>
+	Paikka: Oulu Game Lab, Torikatu 23, 4. kerros (Finnkinoa vastapäätä)<br>
 	Hinta: 180€ syyslukukausi, sisältää 12 kertaa<br>
 	Vastuullinen opettaja: Petteri Hämäläinen, p. 040 823 5645<br>
 	</p>
 
-	<p>Lisätietoja saa suoraan opettajalta.</p>
+	<p>Pelikoulu toteutetaan yhteistyössä OAMK:n ja Oulu Game Labin kanssa. Lisätietoja saa suoraan opettajalta.</p>
 
-	<p>Oma kannettava Microsoft Windows tietokone on pakollinen. Järjestelmävaatimukset: Windows 7 tai uudempi,
-	2 GB RAM, 2 GHz tuplaydinprosessori, nVidia tai AMD grafiikkakortti.</p>
-	
 	<div id="contactdiv" class="form">
 	
 	<h3>Ilmoittautuminen</h3>
 	
 	<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
 		<p>Osallistujan nimi <span class="required">*</span></p>
-		<input name="name" size="30" required><br><br>
+		<input id="name" name="name" size="30" required><br><br>
 		<p>Osallistujan ikä</p>
-		<input name="age" size="30"><br><br>
+		<input id="age" name="age" size="30"><br><br>
 	    <p>Huoltajan nimi <span class="required">*</span></p>
-	    <input name="parentname" size="30" required><br><br>
+	    <input id="parentname" name="parentname" size="30" required><br><br>
 		<p>Huoltajan sähköposti <span class="required">*</span></p>
-		<input name="email" size="30" required><br><br>
+		<input id="email" name="email" size="30" required><br><br>
 		<p>Kysymyksiä tai kommenttia järjestäjille</p>
-		<textarea name="message" rows="4" cols="30"></textarea><br><br>
+		<textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
 		<p>
 		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
 		</p>
@@ -192,19 +192,32 @@
 	
 	</div>
 
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Kiitos ilmoittautumisesta</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="media-body" >
+		        <img style="height:auto; float:left; padding-right:10px" class="img-responsive" src="res/thumbsup.png">
+		        <p>Homma hoidossa! Saatte automaattisen vahvistusviestin sähköpostiinne tuota pikaa.</p>
+		      </div>
+		  </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+	      </div>
+	    </div>
+	
+	  </div>
+	</div>
 
-<div id="thankyoumessage" style="display: none">
-    <h3>Kiitos ilmoittautumisesta!</h3>
-    <h2>Viestisi on nyt matkalla. Vahvistamme yhteydenottosi mahdollisimman pian.</h2>
-    <br>
-    <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
-    <br><br><br><br><br><br>
 </div>
-
-  <br>
-
 </div>
-			</div>
 			
 <div class="col-md-3">
 

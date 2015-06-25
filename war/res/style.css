@@ -4,7 +4,7 @@ html, body {height:100%; min-height:100%;}
 body {font-family:'Open Sans', sans-serif; color: #333; font-size:14px; background:#fff; margin:0; padding:0;}
 .customize-support, .logged-in {padding-top:32px;}
 a, a:hover, a:focus, a:active, .btn, .btn:hover, .btn:focus, .btn:active {outline:none !important;}
-h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
+h1 {font-weight:100; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .btn-register {background:#178ec9; color:#fff; border-radius:0; transition:all 0.4s ease 0s; padding: 10px 15px; text-transform: uppercase;}
 .btn-register:hover {background:#1D9CDD; text-decoration: underline; transition:all 0.4s ease 0s; color:#fff;}
 .playerframe {background-color:#000;margin:30px auto;width:640px;height:390px;position:relative;box-shadow: 0px 1px 8px 2px #d3d3d3;}
@@ -25,9 +25,9 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .cabecera.ilmoittautuminen {background-image: url("class.jpg");}
 .cabecera.otayhteytta {background-image: url("letter.jpg");}
 .cabecera.toimintaa {background-image: url("action.png");}
-.cabecera.kouluille {background-image: url("kouluillebg.jpg");}
+.cabecera.kouluille {background-image: url("kouluillebg.jpg"); background-position: center bottom;}
 .cabecera.kevat2015 {background-image: url("tietomaa.jpg");}
-.cabecera.syksy2015 {background-image: url("pelikoulu.png");}
+.cabecera.pelikoulu {background-image: url("pelikoulu.png"); background-position: center bottom;}
 .cabecera.koodikoulu {background-image: url("koodikoulubg.png");}
 .bg {background-image: url("100tekoa_logo.png"); background-position: 99% 96%; background-size: 170px 97px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
 .bg h1 {color:#fff; display: inline-block; font-weight:300; margin:80px 0 5px 0; padding: 2%; bottom: 0; background: rgba(0, 0, 0, .6); text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);}
@@ -39,14 +39,20 @@ h1{font-weight:300; font-family: 'Open Sans', sans-serif; color: #178ec9;}
 .web-content {padding-right: 50px;}
 .web-content ul {list-style:none; padding: 5px 0 5px 15px;}
 .web-content ul li {background: url("ico-list.png") no-repeat left 5px; padding-left:13px; padding-bottom:4px; font-style:normal;}
-.web-content h3 {font-size:24px; color:#178ec9; margin-bottom:15px;}
-.web-content h2 {font-size:16px; color:#333; margin-bottom:5px;margin-top:0}
+.web-content h3 {font-size:24px; color:#178ec9; margin-bottom:25px;}
+.web-content h2 {font-size:16px; color:#178ec9; margin-bottom:15px; }
+.web-content h1 {font-size:20px; color:#178ec9; margin-bottom:15px;}
+.web-content h3.zeromargin {margin-top:0}
 .web-content img {max-width:100%; height:auto;}
 .web-content table {margin-top:20px;}
 .web-content .aligncenter {display:block; margin:auto; border: solid 1px gray}
 .web-content .form p{margin:0;}
-.bordered {display:block; margin:auto; border: solid 1px gray ;border-radius: 20px;}
-
+.panel {transition: all 0.4s ease 0s;}
+.panel:hover { 
+-webkit-box-shadow: 0px 5px 10px 0px rgba(183,183,183,1);
+-moz-box-shadow: 0px 5px 10px 0px rgba(183,183,183,1);
+box-shadow: 0px 5px 10px 0px rgba(183,183,183,1);
+}
 
 /*OTA YHTEYTTA*/
 .person {box-shadow:1px 1px 2px rgba(0, 0, 0, 0.25); display:block; margin:0 10px 10px 0; min-width: 100px; max-width:226px; max-height:270px}
@@ -137,7 +143,7 @@ blockquote footer {	font-size: inherit; }
 .flexslider-container {padding-right: 0}
 .flexslider-container ul {list-style:none; padding: 0;}
 .flexslider-container ul li {background: none; padding:0; }
-.flexslider-padding  {background: none; padding:65px 0 0 0; }
+.flexslider-padding  {background: none; padding: 75px 0 0 0; }
 
 /*RESPONSIVE*/
 @media (max-width: 768px) {

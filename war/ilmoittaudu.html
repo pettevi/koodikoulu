@@ -27,9 +27,9 @@
   </script> 
   
   <script src="http://malsup.github.com/jquery.form.js"></script> 
-  <script type="text/javascript" src="res/bootstrap.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
-  <script language="javascript" type="text/javascript">
+  <script type="text/javascript">
   function OpenThankYou()
   {
       document.getElementById('thankyoumessage').style.display='block';
@@ -70,7 +70,7 @@
   </script>
 
 </head>
-<body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
+<body>
 
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container">
@@ -113,30 +113,26 @@
 <div id="thankyoumessage" style="display: none">
     <h3>Kiitos ilmoittautumisesta!</h3>
     <h2>Viestisi on nyt matkalla. Vahvistamme yhteydenottosi mahdollisimman pian.</h2>
-    <br>
+    <br><br>
     <a id="menu" href="javascript:void(0)" onclick="CloseThankYou()">Sulje</a>
-    <br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br>
 </div>
 
 <div id="contactdiv" class="form">
   <h3>Ilmoitan lapsen mukaan koodikouluun</h3>
   <br>
   <p>Avoimia ryhmiä ei juuri nyt ole mutta voit ilmoittautua varalle. Ilmoitamme kun seuraava on suunnitteilla</p>
-<!--   <p>Lauantai 11.4.2015 klo 10:00-12:00</p>
-  <p>Yritystakomo, Elektroniikkatie 3, 2.kerros</p> -->
   <br>
   <p>Mukaan oma läppäri, laturi, eväät ja uteliaisuutta.</p>
   <p>4-9 vuotiailla myös huoltaja pitää olla mukana.</p>
   <br>
   <p><b>Tilaisuus on maksuton.</b></p>
-	<br>
+  <br>
 
 	<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
-    <!--p>Ryhmät:</p>
-    <  nput type="radio" name="group" value="to 15.1.2015" checked> 4-9v, torstai 15.1.2015 klo 14:30-16:00<br> 
-    <input type="radio" name="group" value="la 17.1.2015 4-9" checked> 4-9v, lauantai 17.1.2015 klo 13:00-15:00<br>
-    <input type="radio" name="group" value="la 17.1.2015 10-15"> 10-15v, lauantai 17.1.2015 klo 16:00-18:00<br> 
-    <br>-->
+    <!-- p>Ryhmät:</p>
+    <input type="radio" name="group" value="la 13.6.2015" checked> lauantai 13.6.2015 klo 12:00-14:00<br> -->
+    <br>
 		<p>Osallistujan nimi <span class="required">*</span></p>
 		<input name="name" size="30" required><br><br>
 		<p>Osallistujan ikä</p>
@@ -149,7 +145,7 @@
 		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
 		</p>
 		<br>
-    <input type="hidden" name="event" value="varalle" />
+        <input type="hidden" name="event" value="varalle" />
 		<input id="submitbutton" type="submit" value="Ilmoittaudu">
 	</form>
 </div>

@@ -10,11 +10,10 @@
   <meta name="description" content="Lasten koodikoulu asiantuntijavoimin" />
   <meta name="keywords" content="koodikoulu" />
   <link href="favicon.ico" rel="shortcut icon" />
-  <link href="res/fonts.css" rel="stylesheet" />
   <link rel="stylesheet" href="res/style.css" />
   <link rel="stylesheet" href="flexslider.css" type="text/css">
 
-  <meta property="og:title" content="Koodioulu - Lasten Koodikoulu" />
+  <meta property="og:title" content="KoodiOulu - Lasten Koodikoulu" />
   <meta property="og:site_name" content="Koodioulu"/>
   <meta property="og:url" content="http://www.koodioulu.fi" />
   <meta property="og:description" content="KoodiOulu järjestää koodauksen opetusta lapsille Oulussa." />
@@ -25,12 +24,13 @@
   <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>
   <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>
 
-  <script src="res/jquery-2.1.0.js"></script>
-  <script type="text/javascript" src="res/bootstrap.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<!--   <script type="text/javascript" src="res/bootstrap.js"></script> -->
   <script src="http://malsup.github.com/jquery.form.js"></script> 
   <script src="res/jquery-ui-1.10.4.min.js"></script>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
   <script src="jquery.flexslider.js"></script>
   
 	<script type="text/javascript" charset="utf-8">
@@ -70,7 +70,7 @@
 
 </head>
 
-<body class="page page-id-4 page-template page-template-page-templatespage-producto-php">
+<body>
 
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -104,14 +104,14 @@
    </div>
   </nav>
   
-<div id="page">
+<div class="page">
 
-<div class="flexslider-container flexslider-padding">
+<div class="flexslider-container container flexslider-padding">
 <div class="flexslider">
   <ul class="slides">
     <li>
       <img src="res/pelikoulubg.png" />
-      <p class="flex-caption"><a href="pelikoulu.html">Pelikoulu käynnistyy syksyllä 2015</a></p>
+      <p class="flex-caption"><a href="pelikoulu.html">Pelikoulu käynnistyy syyskuussa</a></p>
     </li>
     <li>
       <img src="res/kevat2015bg.jpg" />
@@ -131,36 +131,32 @@
             <div class="web-content">
 
 <div class="col-md-12">
-	<h3><a href="pelikoulu.html">Pelikoulu starttaa</a></h3>
+	<h3 class="zeromargin"><a href="pelikoulu.html">Pelikoulu käynnistyy syyskuussa</a></h3>
 	
 	<p>
-	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu alkaa syksyllä 2015. 
+	Oletko aina halunnut tehdä oman pelin? Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu 
+	alkaa syyskyyssa 2015. 
 	</p>
 
-	<p>KoodiOulu:n ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu on paras paikka lapsen tai nuoren 
+	<p>KoodiOulun ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu on paras 
+	paikka lapsen tai nuoren 
 	alkavalle tietokoneharrastukselle. Pelikoulu ei ole vain ohjelmointia tai pelaamista, se on yhdessä 
-	tekemistä ja luovuutta. Se on uusien taitojen kartuttamista tulevaisuutta varten.
+	tekemistä ja luovuutta. Se on uusien taitojen kartuttamista tulevaisuutta varten. Pelikoulu on yhteistyötä!
 	</p>
 
 	<p>
 	Pelikoulussa käydään perusteista lähtien läpi laajalti pelien suunnitteluun ja tekoon liittyviä asioita. 
-	Koulun aikana opitaan tietokoneen käyttöä, peli-idean suunnittelua ja sen toteutusta, ohjelmistoprojektin hallintaa,  
-	sekä tietysti grafiikka- ja äänisuunnittelua.
+	Koulu antaa pehmeän keinon päästä pelin tekoon mukaan. Käytössä on valmista grafiikkaa ja ääniä joista kasaamalla saa 
+	rakennettua oikean pelin. Valmiin pelin voi myös tarjota julkaistavaksi pelikauppaan tai vain jakaa kavereille. 
+	Pelikouluun osallistuminen ei vaadi ohjelmointikokemusta eikä siellä tulla opettelemaan koodausta.
 	</p>
 	
-	<p>
-	Pelikoulussa tehdään oma peliprojekti joko pareittain tai itsenäisesti.
-	Hyödyksi onkin, jos osallistuja on opiskellut englannin kieltä, hänellä on harjaantuneisuus käyttää omaa konettaan 
-	sujuvasti sekä hallitsee tiedon haun netistä. Varsinaista ohjelmointikokemusta ei tarvita. 
-	Osallistumismaksuun kuuluu myös ohjelmiston täysi lisenssi. 
-	</p>
-	
-	<h3>Kurssitiedot</h3>
+	<h2>Kurssitiedot</h2>
 	
 	<p>Ikäsuositus: 10-15 -vuotiaat<br>
 	Aika: tiistai 25.8. – 24.11.2015 klo 16:30 - 18:30<br>
-	Paikka: Oulu Game Lab, Torikatu 23, 4. kerros (Finnkinoa vastapäätä)<br>
-	Hinta: 180€ syyslukukausi<br>
+	Paikka: Oulu Game Lab, Torikatu 23, 4. kerros<br>
+	Hinta: 180€<br>
 	</p>
 
 	<p>Oma kannettava Microsoft Windows tietokone on pakollinen.</p>
@@ -172,39 +168,40 @@
 
 <div class="col-md-12"><br><br><br></div>
 
-<div class="col-md-5 bordered">
+<div class="col-md-5 panel panel-default">
 	<h3><a href="kouluille.html">Koodikerhot Kouluille</a></h3>
 	<p>
 	KoodiOulu tekee yhteistyötä Oulun alueen peruskoulujen kanssa. Päämuoto on koodikerhot joita järjestetään yhdessä koulujen kanssa. 
 	Tavoitteena on aloittaa kerho heti koulupäivän perään koulun omissa tiloissa. Kerhossa opetellaan koneen käyttöä ja ohjelmointia 
 	peleillä ja tehtävillä.
 	</p>
-	<p class="enlace-barra-lateral"><a href="/kouluille.html">Lue Lisää...</a></p>
+	<p class="enlace-barra-lateral"><a href="/kouluille.html">Lue lisää...</a></p>
 	<br>
 </div>
 
 <div class="col-md-1"></div>
 
-<div class="col-md-5 bordered">
+<div class="col-md-5 panel panel-default">
 	<h3><a href="kevat2015.html">Kevät 2015</a></h3>
 	<p>
-	KoodiOulun koodikoulut ja -kerhot ovat suosittuja koululaisten keskuudessa. Kerhoissamme on käynyt lukuvuoden 2014-2015 aikana noin pari sataa oppilasta.
-	Olemme pitäneet kerhoja Metsokankaalta Ritaharjuun useilla kouluilla sekä koko kevätlukukauden mittainen Koodikerho Tietomaassa.
+	KoodiOulun koodikoulut ja -kerhot ovat suosittuja koululaisten keskuudessa. Kerhoissa on käynyt lukuvuoden 2014-2015 aikana noin 
+	pari sataa oppilasta. Kerhoja on pidetty Metsokankaalta Ritaharjuun useilla kouluilla sekä koko kevätlukukauden mittainen 
+	Koodikerho Tietomaassa.
 	</p>
-	<p class="enlace-barra-lateral"><a href="/kevat2015.html">Lue Lisää...</a></p>
+	<p class="enlace-barra-lateral"><a href="/kevat2015.html">Lue lisää...</a></p>
 	<br>
 </div>
 
 <div class="col-md-12"><br></div>
 
-<div class="col-md-5 bordered">
+<div class="col-md-5 panel panel-default">
 	<h3><a href="lastenkoodikoulu.html">Lasten Koodikoulu</a></h3>
 	<p>
 	Lasten Koodikoulu on 6-9 vuotiaille lapsille tarkoitettu ensikosketus ohjelmointiin. Koodikoulussa lapsi oppii käskemään tietokonetta 
 	kirjoittamalla komentoja selaimessa toimivassa oppiympäristössä. Huoltajan läsnäolo on erityisen suotavaa koska jokainen lapsi 
 	etenee omassa tahdissaan ja tarvitsee aikuisen jonka kanssa jakaa onnistumisen kokemukset. 
 	</p>
-	<p class="enlace-barra-lateral"><a href="lastenkoodikoulu.html">Lue Lisää...</a></p>
+	<p class="enlace-barra-lateral"><a href="lastenkoodikoulu.html">Lue lisää...</a></p>
 	<br>
 </div>
 
@@ -229,11 +226,11 @@
 <div class="noticias barra-lateral">
   <h2>Uutisia</h2>
   <ul>
-    <li>Lasten Koodikoulu valittiin 100 tekoa Oulusta -listalle nro 87. <a href="http://100tekoa.oulu.com/">Lue lisää...</a></li>
+    <li>Oulun Päivien koodikoulu Tietomaassa 13.6.2015 <a href="toimintaa.html">Lue lisää...</a></li>
+    <li>100 tekoa Oulusta -tunnustuksen 87 saa Lasten Koodikoulu. <a href="http://100tekoa.oulu.com/1763/sata-tekoa-oulusta-tunnustuksen-87-saa-lasten-koodikoulu/">Lue lisää...</a></li>
     <li>Oululehti kirjoittaa koodikerhosta. <a href="http://epaper.suomenmaa.fi/olepaper/epaper/20150513/#page/16">Lue lisää...</a></li>
     <li>Olemme mukana Kesäfiiliksessä Tietomaan kanssa. Katso <a href="http://www.ouka.fi/oulu/nuoret/fiilis">Kesäfiilis</a></li>
     <li>MediaOulu kirjoittaa Lasten Koodikoulusta. <a href="http://mediaoulu.fi/2015/04/koodikoulusta-ahaa-elamyksia/">Lue lisää...</a></li>
-    <li>Koodikoulu Yritystakomolla 11.4.2015. <a href="toimintaa.html#11042015">Lue lisää...</a></li>
   </ul>
   <p class="enlace-barra-lateral"><a href="/toimintaa.html">Lisää...</a></p>
 </div>
