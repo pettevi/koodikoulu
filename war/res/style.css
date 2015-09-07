@@ -4,7 +4,7 @@ html, body {height:100%; min-height:100%;}
 body {font-family:'Open Sans', sans-serif; color: #333; font-size:14px; background:#fff; margin:0; padding:0;}
 .customize-support, .logged-in {padding-top:32px;}
 a, a:hover, a:focus, a:active, .btn, .btn:hover, .btn:focus, .btn:active {outline:none !important;}
-h1 {font-weight:100; font-family: 'Open Sans', sans-serif; color: #178ec9;}
+h1 {font-weight:100; color: #178ec9;}
 .btn-register {background:#178ec9; color:#fff; border-radius:0; transition:all 0.4s ease 0s; padding: 10px 15px; text-transform: uppercase;}
 .btn-register:hover {background:#1D9CDD; text-decoration: underline; transition:all 0.4s ease 0s; color:#fff;}
 .playerframe {background-color:#000;margin:30px auto;width:640px;height:390px;position:relative;box-shadow: 0px 1px 8px 2px #d3d3d3;}
