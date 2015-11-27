@@ -7,17 +7,17 @@
   <title>KoodiOulu</title>
 
   <meta name="author" content="KoodiOulu" />
-  <meta name="description" content="Lasten koodikoulu asiantuntijavoimin" />
-  <meta name="keywords" content="koodikoulu" />
+  <meta name="description" content="Koodaustaitoja ja tekniikan opetusta luomassa. Luovuuttakin voi opetella" />
+  <meta name="keywords" content="koodikoulu, koodaus" />
   <link href="favicon.ico" rel="shortcut icon" />
   <link href="res/fonts.css" rel="stylesheet">
   <link rel="stylesheet" href="res/style.css" />
   <link rel="stylesheet" href="flexslider.css" type="text/css">
 
-  <meta property="og:title" content="KoodiOulu - Lasten Koodikoulu" />
-  <meta property="og:site_name" content="Koodioulu"/>
+  <meta property="og:title" content="KoodiOulu" />
+  <meta property="og:site_name" content="KoodiOulu"/>
   <meta property="og:url" content="http://www.koodioulu.fi" />
-  <meta property="og:description" content="KoodiOulu järjestää koodauksen opetusta lapsille Oulussa." />
+  <meta property="og:description" content="Koodaustaitoja ja tekniikan opetusta luomassa. Luovuuttakin voi opetella." />
   <meta property="og:image" content="http://www.koodioulu.com/res/fbpreview.png" />
   <meta property="fb:admins" content="787886531" />
 
@@ -53,6 +53,33 @@
 	  });
 	</script>
 
+  <script>
+    $(document).ready(function() { 
+	    var a = document.getElementById("RegisterLink");
+    	a.onclick = function() {
+      		$("#myModal").modal('show');
+      		return false;
+      	}
+    })
+  </script>
+
+  <script>
+  function captureForm()
+  {
+	  document.getElementById('submitbutton').disabled=true;
+      document.getElementById('submitbutton').value='Pieni hetki';
+  }
+  </script>
+  
+  <script> 
+    $(document).ready(function() { 
+        $('#contactform').ajaxForm(function() { 
+    	  $("#myModal").modal('hide');
+          document.getElementById('submitbutton').disabled=false;
+          document.getElementById('submitbutton').value='Ilmoittaudu';
+        }); 
+     }); 
+  </script>
  
   <script> 
     $(function(){
@@ -73,6 +100,39 @@
 
 <body>
 
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Ilmoittautuminen kevään Pelikouluun</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="media-body" >
+				<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
+					<p>Osallistujan nimi <span class="required">*</span></p>
+					<input id="name" name="name" size="30" required><br><br>
+					<p>Osallistujan ikä</p>
+					<input id="age" name="age" size="30"><br><br>
+				    <p>Huoltajan nimi <span class="required">*</span></p>
+				    <input id="parentname" name="parentname" size="30" required><br><br>
+					<p>Huoltajan sähköposti <span class="required">*</span></p>
+					<input id="email" name="email" size="30" required><br><br>
+					<p>Kysymyksiä tai kommenttia järjestäjille</p>
+					<textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+					<br>
+			    	<input type="hidden" name="event" value="2016 Pelikouluun" />
+					<input id="submitbutton" type="submit" value="Ilmoittaudu">
+				</form>
+		      </div>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+	
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -112,7 +172,7 @@
   <ul class="slides">
     <li>
       <img src="res/pelikoulubg.png" />
-      <p class="flex-caption"><a href="pelikoulu.html">Pelikoulu pyörii täysillä</a></p>
+      <p class="flex-caption"><a href="pelikoulu.html">Syksyn Pelikoulut ohi</a></p>
     </li>
     <!-- li>
       <img src="res/koodikoulubg.jpg" />
@@ -136,10 +196,10 @@
             <div class="web-content">
 
 <div class="col-md-12">
-	<h3 class="zeromargin"><a href="pelikoulu.html">Pelikoulu pyörähti käyntiin</a></h3>
+	<h3 class="zeromargin"><a href="pelikoulu.html">Pelikoulu käynnistyy taas keväällä</a></h3>
 	
 	<p>
-	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu	alkoi syyskuussa täysillä ryhmillä. 
+	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu	pidettiin syksyllä täysillä ryhmillä. 
 	</p>
 
 	<p>KoodiOulun ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu on paras 
@@ -148,19 +208,19 @@
 	</p>
 
 	<p>
-	Pelikoulussa käydään perusteista lähtien läpi laajalti pelien suunnitteluun ja tekoon liittyviä asioita. 
-	Käytössä on valmista grafiikkaa ja ääniä joista kasaamalla saa rakennettua pelin tietokoneelle, 
-	tablettilaitteelle tai puhelimeen. Valmiin pelin voi tarjota julkaistavaksi pelikauppaan tai vain jakaa kavereille. 
+	Pelikoulussa on käytössä valmista grafiikkaa ja ääniä joista kasaamalla saa rakennettua pelin tietokoneelle, 
+	tablettilaitteelle tai puhelimeen.  
 	Pelikouluun osallistuminen ei vaadi ohjelmointikokemusta eikä siellä tulla opettelemaan ohjelmakoodin kirjoitusta.
 	</p>
 	
 	<p>
-	<b>Voit ilmoittaa halukkuudesta osallistua, tiedotamme kun seuraavaa ryhmää kasataan.</b>
+	Kevätlukukauden 2016 ryhmät ovat suunnittelun alla. Voit ilmoittaa alustavasti halukkuudesta osallistua, 
+	tiedotamme jatkosta hyvissä ajoin. <a href="pelikoulu.html">Lue lisää Pelikoulusta</a>
 	</p>
 	
-	<br>
-
-	<a class="btn-register" href="pelikoulu.html">Lue lisää Pelikoulusta</a>
+	<br><br>
+	
+	<a class="btn-register" id="RegisterLink" href="pelikoulu.html">Ilmoittaudu Pelikouluun</a>    
 
 </div>
 

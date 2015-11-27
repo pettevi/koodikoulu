@@ -39,8 +39,8 @@ public class Contact extends HttpServlet {
         try {
             MimeMessage msg = new MimeMessage(session);
             msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.fi"));
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
-            msg.setSubject("Viesti www.koodioulu.com");
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("petteri_hamalainen@yahoo.com", "koodioulu.fi"));
+            msg.setSubject("Viesti www.koodioulu.fi");
             msg.setText("\n\nNimi: " + name + "\nEmail: " + email + "\nViesti: " + message);
             Transport.send(msg);
             allOK = true;

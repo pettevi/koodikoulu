@@ -50,8 +50,8 @@ public class Register extends HttpServlet {
         
         try {
             Message msg = new MimeMessage(session);
-            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "www.koodioulu.fi")); // pakko olla pete.hamalainen@gmail.com
-            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("pete.hamalainen@gmail.com", ""));
+            msg.setFrom(new InternetAddress("pete.hamalainen@gmail.com", "Petteri Hamalainen")); // pakko olla pete.hamalainen@gmail.com
+            msg.addRecipient(Message.RecipientType.TO, new InternetAddress("petteri_hamalainen@yahoo.com", "petteri_hamalainen@yahoo.com"));
             msg.setSubject("Ilmoittautuminen " + event);
             msg.setText("\n\nNimi: " + name + "\nIkä: " + age + "\nHuoltajan nimi: " + parentname + "\nEmail: " + email + "\nPuh: " + tel + "\nRyhmä: " + group + "\nViesti: " + message);
             Transport.send(msg);
