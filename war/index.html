@@ -27,11 +27,8 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<!--   <script type="text/javascript" src="res/bootstrap.js"></script> -->
   <script src="http://malsup.github.com/jquery.form.js"></script> 
-  <script src="res/jquery-ui-1.10.4.min.js"></script>
 
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script> -->
   <script src="jquery.flexslider.js"></script>
   
 	<script type="text/javascript" charset="utf-8">
@@ -53,6 +50,13 @@
 	  });
 	</script>
 
+	<script> 
+	  $(function(){
+	    $("#footerInclude").load("footer.html"); 
+	  });
+	</script> 
+	
+<!--
   <script>
     $(document).ready(function() { 
 	    var a = document.getElementById("RegisterLink");
@@ -62,7 +66,7 @@
       	}
     })
   </script>
-
+ 
   <script>
   function captureForm()
   {
@@ -80,13 +84,8 @@
         }); 
      }); 
   </script>
+ -->
  
-  <script> 
-    $(function(){
-      $("#footerInclude").load("footer.html"); 
-    });
-  </script> 
-
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -101,10 +100,8 @@
 <body>
 
 	<!-- Modal -->
-	<div id="myModal" class="modal fade" role="dialog">
+	<!-- div id="myModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
-	
-	    <!-- Modal content-->
 	    <div class="modal-content">
 	      <div class="modal-header">
 	        <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -131,7 +128,7 @@
 		  </div>
 	    </div>
 	  </div>
-	</div>
+	</div-->
 	
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -172,12 +169,8 @@
   <ul class="slides">
     <li>
       <img src="res/pelikoulubg.png" />
-      <p class="flex-caption"><a href="pelikoulu.html">Syksyn Pelikoulut ohi</a></p>
+      <p class="flex-caption"><a href="pelikoulu.html">Pelikoulu vietiin päätökseen</a></p>
     </li>
-    <!-- li>
-      <img src="res/koodikoulubg.jpg" />
-      <p class="flex-caption"><a href="lastenkoodikoulu.html">6-10v. koodipaja Mahdollisuuksien torilla 5.9.2015</a></p>
-    </li> -->
     <li>
       <img src="res/kevat2015bg.jpg" />
       <p class="flex-caption"><a href="kevat2015.html">Mitä tehtiin keväällä 2015</a></p>
@@ -196,35 +189,16 @@
             <div class="web-content">
 
 <div class="col-md-12">
-	<h3 class="zeromargin"><a href="pelikoulu.html">Pelikoulu käynnistyy taas keväällä</a></h3>
+	<h3 class="zeromargin">Uusia kerhoja ei suunnitteilla</h3>
 	
-	<p>
-	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu	pidettiin syksyllä täysillä ryhmillä. 
-	</p>
-
-	<p>KoodiOulun ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu on paras 
-	paikka lapsen tai nuoren alkavalle tietokoneharrastukselle. Pelikoulu ei ole vain ohjelmointia tai pelaamista, 
-	se on yhdessä tekemistä ja luovuutta. Se on uusien taitojen kartuttamista tulevaisuutta varten. 
-	</p>
+	<p>KoodiOulun porukka lepäilee toistaiseksi. Suunnitteilla ei ole aloittaa uusia kerhoja.</p>
 
 	<p>
-	Pelikoulussa on käytössä valmista grafiikkaa ja ääniä joista kasaamalla saa rakennettua pelin tietokoneelle, 
-	tablettilaitteelle tai puhelimeen.  
-	Pelikouluun osallistuminen ei vaadi ohjelmointikokemusta eikä siellä tulla opettelemaan ohjelmakoodin kirjoitusta.
+	Koulujen kanssa jatketaan kuitenkin yhteistyötä. Kysy lisää jos haluat koodikerhon lähikoulullesi.
 	</p>
-	
-	<p>
-	Kevätlukukauden 2016 ryhmät ovat suunnittelun alla. Voit ilmoittaa alustavasti halukkuudesta osallistua, 
-	tiedotamme jatkosta hyvissä ajoin. <a href="pelikoulu.html">Lue lisää Pelikoulusta</a>
-	</p>
-	
-	<br><br>
-	
-	<a class="btn-register" id="RegisterLink" href="pelikoulu.html">Ilmoittaudu Pelikouluun</a>    
-
 </div>
 
-<div class="col-md-12"><br><br><br></div>
+<div class="col-md-12"><br></div>
 
 <div class="col-md-5 panel panel-default">
 	<h3><a href="kouluille.html">Koodikerhot Kouluille</a></h3>
@@ -240,11 +214,10 @@
 <div class="col-md-1"></div>
 
 <div class="col-md-5 panel panel-default">
-	<h3><a href="kevat2015.html">Kevät 2015</a></h3>
+	<h3><a href="kevat2015.html">Pelikoulu</a></h3>
 	<p>
-	KoodiOulun koodikoulut ja -kerhot ovat suosittuja koululaisten keskuudessa. Kerhoissa on käynyt lukuvuoden 2014-2015 aikana noin 
-	200 oppilasta. Kerhoja on pidetty Metsokankaalta Ritaharjuun sekä koko kevään mittainen 
-	Koodikerho Tietomaassa.
+	Koodi- ja Pelikoulut ovat olleet suosittuja. Kerhoissa on parhaimmillaan käynyt 
+	lukuvuodessa 200 oppilasta. Kerhoja on pidetty kouluilla Metsokankaalta Ritaharjuun sekä Tietomaassa ja OAMK:n Pelikampuksella.
 	</p>
 	<p class="enlace-barra-lateral"><a href="/kevat2015.html">Lue lisää...</a></p>
 	<br>
@@ -270,27 +243,24 @@
 
 <div class="col-md-3">
 
-<div class="noticias barra-lateral">
+<!-- div class="noticias barra-lateral">
   <h2>Yhteistyössä</h2>
   <a target="_blank" href="http://www.oamk.fi/"><img class="firstimage" src="res/oamk.logo.png"></a>
   <a target="_blank" href="http://www.oulugamelab.net/"><img src="res/ogl.logo.png"></a>
-</div>
+</div-->
 
 <div class="noticias barra-lateral satatekoa">
-  <a target="_blank" href="http://100tekoa.oulu.com/"><img class="firstimage" src="res/100tekoa_logo.gif"></a>
+  <img class="firstimage" src="res/100tekoa_logo.gif">
   <p>Lasten Koodikoulu on teko nro 87</p>
 </div>
 
 <div class="noticias barra-lateral">
   <h2>Uutisia</h2>
   <ul>
-    <li>Oulun Päivien koodikoulu Tietomaassa 13.6.2015 <a href="toimintaa.html">Lue lisää...</a></li>
-    <li>100 tekoa Oulusta -tunnustuksen 87 saa Lasten Koodikoulu. <a href="http://100tekoa.oulu.com/1763/sata-tekoa-oulusta-tunnustuksen-87-saa-lasten-koodikoulu/">Lue lisää...</a></li>
+    <li>Elektroniikkaleiri tulossa jälleen kesällä 2018. </li>
     <li>Oululehti kirjoittaa koodikerhosta. <a href="http://epaper.suomenmaa.fi/olepaper/epaper/20150513/#page/16">Lue lisää...</a></li>
-    <li>Olemme mukana Kesäfiiliksessä Tietomaan kanssa. Katso <a href="http://www.ouka.fi/oulu/nuoret/fiilis">Kesäfiilis</a></li>
     <li>MediaOulu kirjoittaa Lasten Koodikoulusta. <a href="http://mediaoulu.fi/2015/04/koodikoulusta-ahaa-elamyksia/">Lue lisää...</a></li>
   </ul>
-  <p class="enlace-barra-lateral"><a href="/toimintaa.html">Lisää...</a></p>
 </div>
 
 <div class="descargas barra-lateral">
@@ -299,11 +269,11 @@
 </div>
         </div>
     </div>
-  </div>
-  
+ </div>
+
 </div>
 
 <!-- FOOTER -->
-  <div id="footerInclude"></div>
+<div id="footerInclude"></div>
 
 </body></html>

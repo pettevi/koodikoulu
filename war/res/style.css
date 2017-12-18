@@ -27,9 +27,10 @@ h1 {font-weight:100; color: #178ec9;}
 .cabecera.toimintaa {background-image: url("action.png");}
 .cabecera.kouluille {background-image: url("kouluillebg.jpg"); background-position: center bottom;}
 .cabecera.kevat2015 {background-image: url("tietomaa.jpg");}
+.cabecera.raspikoulu {background-image: url("raspibg.png"); background-position: center bottom;}
 .cabecera.pelikoulu {background-image: url("pelikoulu.png"); background-position: center bottom;}
 .cabecera.koodikoulu {background-image: url("koodikoulubg.png");}
-.bg {background-image: url("100tekoa_logo.png"); background-position: 99% 96%; background-size: 170px 97px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
+.bg {/*background-image: url("100tekoa_logo.png");*/ background-position: 99% 96%; background-size: 170px 97px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
 .bg h1 {color:#fff; display: inline-block; font-weight:300; margin:80px 0 5px 0; padding: 2%; bottom: 0; background: rgba(0, 0, 0, .6); text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);}
 .bg h2 {color:#fff; display: inline-block; font-size:20px; line-height:25px; font-weight:400; margin:0 0 5px 0; padding: 2%; bottom: 0; background: rgba(0, 0, 0, .6); text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);}
 .padding-container {padding:25px 0 0 0}
@@ -166,6 +167,6 @@ blockquote footer {	font-size: inherit; }
 	.listado-noticias, .contenido-noticia {padding-right:15px;}
 	.web-partners ul li{width:100%; text-align:center;}
 	.playerframe {width:279px;height:185px}
-	.bg {background-image: url("100tekoa_logo.png"); background-position: 99% 99%; background-size: 84px 48px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
+	.bg {/*background-image: url("100tekoa_logo.png");*/ background-position: 99% 99%; background-size: 84px 48px; min-height: 200px; background-repeat:no-repeat; height: auto; width: 100%; padding-bottom:115px;}
   #player {width:320px;height:195px}
 }

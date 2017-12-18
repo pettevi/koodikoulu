@@ -62,9 +62,65 @@
     ga('send', 'pageview'); 
   </script>
 
+  <script>
+    $(document).ready(function() { 
+	    var a = document.getElementById("Tapaamisajat");
+    	a.onclick = function() {
+      		$("#tapaamiskerratModal").modal('show');
+      		return false;
+      	}
+    })
+  </script>
+
 </head>
 <body>
 
+	<!-- Modal -->
+	<div id="tapaamiskerratModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Pelikoulun tapaamiskerrat</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="media-body" >
+		      <p>Pelikoulu kokoontuu aina keskiviikkoisin klo 17.00-19.00 alla merkittyinä päivinä. 
+		      Paikka on Kulttuuritalo Valveen kokoushuone 3.kerroksessa</p>
+					<p>Tammikuu<br>
+					27.01.2016<br>
+					</p>
+					<p>Helmikuu<br>
+					3.2.2016<br>
+					10.2.2016<br>
+					24.2.2016<br>
+					</p>
+					<p>Maaliskuu<br>
+					2.3.2016<br>
+					9.3.2016<br>
+					30.3.2016<br>
+					</p>
+					<p>Huhtikuu<br>
+					6.4.2016<br>
+					13.4.2016<br>
+					27.4.2016<br>
+					</p>
+					<p>Toukokuu<br>
+					4.5.2016<br>
+					11.5.2016<br>
+					</p>
+					Tapaamisia ei siis ole 17.2, 16.3, 23.3, 20.4.
+				</div>
+		  </div>
+ 	      <div class="modal-footer">
+	    	<button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+          </div>
+	    </div>
+	  </div>
+	</div>
+	
 	<nav class="navbar navbar-default" role="navigation">
 	  <div class="container">
 	   <div class="navbar-header">
@@ -107,10 +163,6 @@
 
 	<h3>Tervetuloa Pelikouluun</h3>
 
-	<p>
-	Oulun ensimmäinen peruskoululaisille suunnattu tietokonepelien suunnittelukoulu pidettiin syksyllä 2015. 
-	</p>
-
 	<p>KoodiOulu:n ja <a href="http://www.oulugamelab.net/">Oulu Game Lab</a>:n järjestämä pelisuunnittelukoulu 
 	on paras paikka lapsen ja nuoren alkavalle tietokoneharrastukselle. Pelikoulu ei ole vain ohjelmointia tai 
 	pelaamista, se on yhdessä tekemistä ja luovuutta. Se on uusien taitojen kartuttamista tulevaisuutta varten.</p>
@@ -135,49 +187,43 @@
 	</p>
 
 	<p>
-    Pelikoulun lopuksi järjestetään julkistustilaisuus jossa osallistujat saavat esitellä valmiit tuotokset.
+    Mikäli osallistujat näin haluavat pelikoulun lopuksi järjestetään julkistustilaisuus jossa osallistujat saavat esitellä 
+    valmiit tuotokset.
     </p>
-
-	<h2>Vaatimukset 7-9 vuotiaiden ryhmässä</h2>
-
-	<p>
-	Nuorempien ryhmässä käytetään enimmäkseen suomenkielisiä ohjelmia mutta englanninkieltä ei myöskään voi välttää. 
-	Lukutaito on ehdottoman tärkeää. 
-	Tärkeää myös on, että osallistujalla on harjaantuneisuus käyttää omaa konettaan, 
-	pystyy asentamaan ohjelmia sekä hallitsee netin käytön perusteet. 
-	Käytämme yksinomaan ilmaisohjelmia. Käytettävä pelinteko-ohjelmisto on Scrirran 
-	<a href="https://www.scirra.com/">Construct 2</a>. 
-	Varsinaista ohjelmointikokemusta ei tarvita. 
-	</p>
 
 	<h2>Vaatimukset 10-15 vuotiaiden ryhmässä</h2>
 	
 	<p>
-	Käytössä olevat ohjelmat ovat englannin kielellä. Hyödyksi onkin, jos
-	osallistuja on opiskellut englantia, hänellä on harjaantuneisuus käyttää omaa konettaan sujuvasti sekä hallitsee 
-	tiedon haun netistä. Käytämme yksinomaan ilmaisohjelmia. Käytettävä pelinteko-ohjelmisto on Scrirran 
-	<a href="https://www.scirra.com/">Construct 2</a>. 
-	Varsinaista ohjelmointikokemusta ei tarvita. 
-	</p>
-
-	<p>
-	Vastuullinen opettaja: Petteri Hämäläinen, p. 040 823 5645<br>
+	Käytössä olevat ohjelmat ovat englanninkielisiä ilmaisohjelmia jotka asennetaan jokaisen osallistujan omalle koneelle. 
+	Hyödyksi onkin, jos osallistuja on opiskellut englantia, hänellä on harjaantuneisuus käyttää omaa konettaan sujuvasti 
+	sekä hallitsee tiedon haun netistä.  Käytettävä pelinteko-ohjelmisto on Scirran 
+	<a href="https://www.scirra.com/">Construct 2</a>. Varsinaista ohjelmointikokemusta ei tarvita. 
 	</p>
 
 	<p>Oma kannettava Microsoft Windows tietokone on pakollinen. Järjestelmävaatimukset: Windows 7 tai uudempi,
-	2 GB RAM, 2 GHz tuplaydinprosessori, mielellään nVidia tai AMD grafiikkakortti.</p>
+	2 GB RAM, 2 GHz tuplaydinprosessori, n. 2 GB vapaata levytilaa.</p>
+
+	<h2>Kurssitiedot</h2>
+
+	<p>
+	Aika: keskiviikkoisin 27.1. - 11.5.2016 klo 17.00-19.00 (katso 
+	<a id="Tapaamisajat" href="pelikoulu.html">Pelikoulun tarkat tapaamisajat</a>)<br>    
+	Paikka: Kulttuuritalo Valve, kokoushuone 3.kerros, Hallituskatu 7, 90100 Oulu<br> 
+	Vastuullinen opettaja: Petteri Hämäläinen, p. 040 823 5645<br>
+	</p>
 
 	<div id="contactdiv" class="form">
 	
 	<h3>Ilmoittautuminen</h3>
 	
 	<p>
-	Jätä yhteystietosi. Tiedotamme kun seuraavaa Pelikoulua suunnitellaan.
+	Juuri nyt ei ole mahdollista ilmoittautua. Voit sensijaan kertoa kiinnostuksestasi <a href="otayhteytta.html">s-postitse</a>.
 	</p>
 	
 	<br>
 
-	<form id="contactform" action="/register" method="post" onSubmit="captureForm()">
+<!-- 
+	<form id="contactform" action="/register-k-i-d" method="post" onSubmit="captureForm()">
 		<p>Osallistujan nimi <span class="required">*</span></p>
 		<input id="name" name="name" size="30" required><br><br>
 		<p>Osallistujan ikä</p>
@@ -192,10 +238,10 @@
 		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
 		</p>
 		<br>
-    	<input type="hidden" name="event" value="Varalle Pelikouluun" />
-		<input id="submitbutton" type="submit" value="Ilmoittaudu">
+    	<input type="hidden" name="event" value="2016 Pelikouluun" />
+		input id="submitbutton" type="submit" value="Ilmoittaudu"> 
 	</form>
-
+-->
 	</div>
 
 	<!-- Modal -->
@@ -242,7 +288,7 @@
     <p>
     <b>Petteri</b> on pitkän linjan ohjelmistoalan ekspertti. Uransa hän on tehnyt tietoverkkojen ohjelmistojen parissa. 
     Hän on Oulun yliopiston käynyt aineopettaja ja pitänyt useita ohjelmointiin ja tietokoneen käyttöön liittyviä kursseja 
-    vuosien saatossa. Petteri on  intohimoinen mobiilipelien ystävä.
+    vuosien saatossa. Petteri on intohimoinen mobiilipelien ystävä.
     </p>
   </div>
 	

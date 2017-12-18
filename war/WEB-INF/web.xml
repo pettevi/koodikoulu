@@ -6,27 +6,32 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 
   <servlet>
-    <servlet-name>register</servlet-name>
-    <servlet-class>com.koodikoulu.Register</servlet-class>
+    <servlet-name>registerkid</servlet-name>
+    <servlet-class>com.koodikoulu.RegisterKid</servlet-class>
   </servlet>
 
   <servlet>
-    <servlet-name>contact</servlet-name>
-    <servlet-class>com.koodikoulu.Contact</servlet-class>
+    <servlet-name>contactme</servlet-name>
+    <servlet-class>com.koodikoulu.ContactMeXXX</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>register</servlet-name>
-    <url-pattern>/register</url-pattern>
+    <servlet-name>registerkid</servlet-name>
+    <url-pattern>/registerkid</url-pattern>
   </servlet-mapping>
 
 	<servlet-mapping>
-		<servlet-name>contact</servlet-name>
-		<url-pattern>/contact</url-pattern>
+		<servlet-name>contactme</servlet-name>
+		<url-pattern>/contactme</url-pattern>
 	</servlet-mapping>
 	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
 
+	<mime-mapping>
+        <extension>appcache</extension>
+        <mime-type>text/cache-manifest</mime-type>
+    </mime-mapping>
+    
 </web-app>

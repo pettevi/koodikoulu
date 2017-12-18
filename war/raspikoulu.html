@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Raspikoulu</title>
+		
+  <meta name="author" content="KoodiOulu">
+  <meta name="description" content="Lasten koodikoulu asiantuntijavoimin">
+  <meta name="keywords" content="koodikoulu">
+  
+  <link href="favicon.ico" rel="shortcut icon">
+  <link href="res/fonts.css" rel="stylesheet">
+  <link rel="stylesheet" href="res/style.css">
+  
+  <link rel="apple-touch-icon" href="res/57x57.png"/>  
+  <link rel="apple-touch-icon" sizes="72x72" href="res/72x72.png"/>  
+  <link rel="apple-touch-icon" sizes="114x114" href="res/114x114.png"/>  
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+  <script src="res/jquery-ui-1.10.4.min.js"></script>
+  
+  <script> 
+    $(function(){
+      $("#footerInclude").load("footer.html"); 
+    });
+  </script> 
+  
+  <script src="http://malsup.github.com/jquery.form.js"></script> 
+  <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <script>
+  function captureForm()
+  {
+	  document.getElementById('submitbutton').disabled=true;
+      document.getElementById('submitbutton').value='Pieni hetki';
+  }
+  </script>
+
+  <script> 
+    $(document).ready(function() { 
+        $('#contactform').ajaxForm(function() { 
+    	  $("#myModal").modal('show');
+          document.getElementById('submitbutton').disabled=false;
+          document.getElementById('submitbutton').value='Ilmoittaudu';
+          document.getElementById('name').value='';
+          document.getElementById('age').value='';
+          document.getElementById('email').value='';
+          document.getElementById('parentname').value='';
+          document.getElementById('message').value='';
+        }); 
+     }); 
+  </script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-37518235-4', 'auto');
+    ga('send', 'pageview'); 
+  </script>
+
+  <script>
+    $(document).ready(function() { 
+	    var a = document.getElementById("Tapaamisajat");
+    	a.onclick = function() {
+      		$("#tapaamiskerratModal").modal('show');
+      		return false;
+      	}
+    })
+  </script>
+
+</head>
+<body>
+
+	<!-- Modal -->
+	<div id="tapaamiskerratModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Pelikoulun tapaamiskerrat</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="media-body" >
+		      <p>Pelikoulu kokoontuu aina keskiviikkoisin klo 17.00-19.00 alla merkittyinä päivinä. 
+		      Paikka on Kulttuuritalo Valveen kokoushuone 3.kerroksessa</p>
+					<p>Tammikuu<br>
+					27.01.2016<br>
+					</p>
+					<p>Helmikuu<br>
+					3.2.2016<br>
+					10.2.2016<br>
+					24.2.2016<br>
+					</p>
+					<p>Maaliskuu<br>
+					2.3.2016<br>
+					9.3.2016<br>
+					30.3.2016<br>
+					</p>
+					<p>Huhtikuu<br>
+					6.4.2016<br>
+					13.4.2016<br>
+					27.4.2016<br>
+					</p>
+					<p>Toukokuu<br>
+					4.5.2016<br>
+					11.5.2016<br>
+					</p>
+					Tapaamisia ei siis ole 17.2, 16.3, 23.3, 20.4.
+				</div>
+		  </div>
+ 	      <div class="modal-footer">
+	    	<button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+          </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container">
+	   <div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+		  <span class="sr-only">Toggle navigation</span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		  <span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand" href="/"><img src="res\logo.png"></a>
+	  </div>
+
+	  <div class="collapse navbar-collapse navbar-ex1-collapse">
+			<div class="menu-main-container">
+			<ul id="menu-main" class="nav navbar-nav navbar-right">
+				<li id="menu-item-12" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-4 current_page_item menu-item-12"><a href="./index.html">Etusivu</a></li>
+				<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="./toimintaa.html">Toimintaa</a></li>
+				<li id="menu-item-23" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23"><a href="./otayhteytta.html">Ota yhteyttä</a></li>
+			</ul></div>
+	  </div>
+	 </div>
+	</nav>
+	
+<div id="page">
+
+	<div class="cabecera raspikoulu">
+		<div class="bg">
+			<div class="container">
+				<h1>Nyt HAKKEROIDAAN!</h1>
+				<br>
+
+				<br><br><br><br><br>
+			</div>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-9">
+				<div class="web-content">
+
+
+	<h3>Tervetuloa Raspikouluun</h3>
+
+	<p>
+	Raspikoulu on syksyllä 2016 alkava kokonaan uusi kerhokokonaisuus jossa tehdään käsillä ja 
+	opetellaan tietotekniikkaa kokonaan uudelta suunnalta. Raspikoulussa rakennetaan, hakkeroidaan 
+	ja koodataan. 
+	</p>
+	
+	<p>
+	Raspberry Pi nauttii suurta suosiota maailmalla niin rakennus- kuin opetusalustanakin. Se 
+	on täysin käyttövalmis tietokone. Raspberryä voi laajentaa omilla projekteilla tai käyttää sitä 
+	esimerkiksi kotipalvelimena. Siihen on saatavilla laajalti ilmaisia	ohjelmistoja. Raspberryn 
+	voi ostaa itselleen osoitteesta  <a href="https://www.raspberrypi.org/">www.raspberrypi.org</a>.
+	</p>
+	
+	<h2>Sisältö</h2>
+	
+	<p>
+	Raspikoulussa käydään läpi sekä ohjelmisto- että laiteläheisiä asoita tukien toisiaan.
+	Osallistujat saavat pareittain oman Raspberry Pi 3 laitteiston käyttöönsä koulun ajaksi. 
+	Kurssilla opitaan järjestelmäasennusta ja konfigurointiin, koulun edetessä mukaan tulee 
+	myös koodauksen perusteita. Kurssi antaa perusteet nettisivujen tekemiseen.</p>
+
+	<p>
+	Koulun aikana opitaan yleisesti tietokoneen käyttöä sekä osallistujien toiveiden mukaisesti mm.:
+	</p>
+	
+	<ul>
+	<li>Linux käyttöjärjestelmän ja ohjelmistojen asennus</li> 
+	<li>Linuxin graafisen käyttöliittymän sekä komentorivin käyttö</li>
+	<li>Tietokoneverkon rakennus ja konfigurointi</li> 
+	<li>Web serverin asennus ja oman sivun koodaus</li> 
+	<li>HTML5 ja PHP alkeita</li>
+	<li>Pelikoodausta Javalla</li>
+	<li>Minecraftia, hakkerointia ja hauskanpitoa</li> 
+	</ul>
+	
+	<h2>Vaatimukset</h2>
+
+	<p>
+	Käytössä olevat ohjelmat ja muu materiaali on englanninkielistä. Hyödyksi onkin, jos 
+	osallistuja on opiskellut englantia, on harjaantunut käyttämään omaa konettaan 
+	sekä hallitsee tiedon haun netistä. Varsinaista ohjelmointikokemusta ei tarvita.
+	</p>
+
+	<p>Raspikoulussa ei tarvita mitään omia laitteita. Läppäristä voi olla hyötyä
+	mutta sitä ei välttämättä tarvita. Laitteet annetaan järjestäjän toimesta ja kaikki ohjelmistot 
+	ovat ilmaisia. Oman Raspberry laittoiston saa tietysti kaverin kanssa tuoda mukanaan.</p>
+
+	<h2>Kurssitiedot</h2>
+
+	<p>
+	Ikäsuositus: 9-14 v.<br>
+	Aika: Maanantaisin 5.9. - 14.11.2016 klo 16.30-18.30 poislukien syysloma 24.10. (10 tapaamista)<br>    
+	Paikka: Kulttuuritalo Valve, kokoushuone 3.kerros, Hallituskatu 7, 90100 Oulu<br>
+	<b>Hinta: 170€</b> (laskutetaan yhdessä osassa koulun aloituksen yhteydessä)<br>
+	</p> 
+
+	<p>Vastuullinen opettaja: Petteri Hämäläinen, p. 040 823 5645</p>
+
+	<div id="contactdiv" class="form">
+	
+	<h3>Ilmoittautuminen</h3>
+	
+	<p>
+	Voit ilmoittaa lapsesi alla olevalla lomakkeella.
+	</p>
+	
+	<br>
+ 
+	<form id="contactform" action="/registerkid" method="post" onSubmit="captureForm()">
+		<p>Osallistujan nimi <span class="required">*</span></p>
+		<input id="name" name="name" size="30" required><br><br>
+		<p>Osallistujan ikä</p>
+		<input id="age" name="age" size="30"><br><br>
+	    <p>Huoltajan nimi <span class="required">*</span></p>
+	    <input id="parentname" name="parentname" size="30" required><br><br>
+		<p>Huoltajan sähköposti <span class="required">*</span></p>
+		<input id="email" name="email" size="30" required><br><br>
+		<p>Kysymyksiä tai kommenttia järjestäjille</p>
+		<textarea id="message" name="message" rows="4" cols="30"></textarea><br><br>
+		<p>
+		Tietosi ovat turvassa. Käytämme niitä vain osallistumisen vahvistukseen ja mahdolliseen tiedotukseen.
+		</p>
+		<br>
+    	<input type="hidden" name="event" value="2016 Raspikouluun" />
+		<input id="submitbutton" type="submit" value="Ilmoittaudu"> 
+	</form>
+
+	</div>
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+	
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Kiitos ilmoittautumisesta</h4>
+	      </div>
+	      <div class="modal-body">
+		      <div class="media-body" >
+		        <img style="height:auto; float:left; padding-right:10px" class="img-responsive" src="res/thumbsup.png">
+		        <p>Homma hoidossa! Saatte automaattisen vahvistusviestin sähköpostiinne tuota pikaa.</p>
+		      </div>
+		  </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Sulje</button>
+	      </div>
+	    </div>
+	
+	  </div>
+	</div>
+
+</div>
+</div>
+			
+<div class="col-md-3">
+
+	<div class="padding-container"></div>
+
+	<div class="noticias barra-lateral">
+	  <img style="margin:0 20px 0 0; width:250px; height:182px" src="res/raspberrypi.png">
+	  <br>
+	  <p>Raspberry Pi, tuttavallisemmin Raspi, on Linux käyttöjärjestelmää ajava minitietokone joka on tarkoitettu 
+	tietotekniikan opetteluun ja omien projektien perustaksi.</p>
+	</div>
+
+  <div class="noticias barra-lateral">
+    
+    <img style="float:left; margin:0 20px 0 0; width:70px; height:70px" src="res/petteri.round.png">
+    <p>
+    
+    <b>Petteri</b> on pitkän linjan ohjelmistoalan ekspertti. Uransa hän on tehnyt tietoverkkojen ohjelmistojen parissa. 
+    Hän on Oulun yliopiston käynyt aineopettaja ja pitänyt useita ohjelmointiin ja tietokoneen käyttöön liittyviä kursseja 
+    vuosien saatossa. Petteri on intohimoinen mobiilipelien ystävä.
+    </p>
+  </div>
+	
+</div>
+
+		</div>
+	</div>
+</div>
+
+<!-- FOOTER -->
+<div id="footerInclude"></div>
+
+</body></html>
